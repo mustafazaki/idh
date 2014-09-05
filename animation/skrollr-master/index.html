@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <title>skrollr - parallax scrolling for the masses</title>
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="dist/jquery.nicescroll.min.js"></script>
 
 
     <!--<link href="examples/fixed-positioning.css" rel="stylesheet" type="text/css"/>-->
@@ -118,7 +119,15 @@
     //    var topVal = (animate.offset().top - csstop);
     //    console.log('data-' + topVal + '');
     //    animate.attr('data-' + topVal + '', 'position:fixed;top:'+csstop+'px');
+    $(document).ready(function () {
 
+        var nice = $("html").niceScroll({
+            scrollspeed:40
+
+        });  // The document page (body)
+
+
+    });
 
 </script>
 
