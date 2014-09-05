@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>skrollr - parallax scrolling for the masses</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+    <!--<link href="examples/fixed-positioning.css" rel="stylesheet" type="text/css"/>-->
+    <link href="examples/main.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        .span {
+            width: 100%;
+            height: 600px;
+            background: lightblue;
+            float: left;
+
+        }
+
+        h1.process {
+
+            line-height: 600px;
+            text-align: center;
+
+        }
+
+        .absolute {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        .animation {
+            float: left;
+            position: relative;
+            width: 100%;
+            height: 600px;
+            background: green;
+
+        }
+
+        .scene {
+            position: relative;
+            height: 600px;
+            width: 70%;
+            /*overflow: hidden;*/
+            margin: 0 auto;
+        }
+
+        div {
+            background-repeat: no-repeat !important;
+        }
+
+        .sketch {
+            opacity: 0;
+            background: url("images/sketch.jpg") bottom right;
+        }
+
+        .hand {
+            background: url("images/hand-2.png");
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 503px;
+            height: 341px;
+        }
+
+
+
+        .hand1 {
+            background: url("images/hand-3.png");
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 215px;
+            height: 374px;
+        }
+
+        .ipad {
+            background: url("images/ipad.png");
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 848px;
+            height: 606px;
+        }
+
+        .ipad-image{
+
+        }
+
+        .sketch-h1 {
+            position: absolute;
+            top: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="span">1</div>
+<div class="span">2</div>
+<div class="animation" id="animation" data-0="position:relative;" data-1200="position:fixed;">
+
+
+    <div class="scene">
+
+
+        <h1 class="process absolute" data-anchor-target="#animation"
+            data-bottom-top="transform:scale(0);"
+            data-bottom="transform:scale(1);"
+            data--300-bottom="transform:scale(0);"
+                >PROCESS</h1>
+
+        <h1 class="sketch-h1" data-anchor-target="#animation" data--301-bottom="left:-500px"
+            data--500-bottom="left:150px">Sketch</h1>
+
+        <div class="sketch absolute" data-anchor-target="#animation" data--301-bottom="opacity:0;"
+             data--600-bottom="opacity:1;"></div>
+        <div class="hand" data-anchor-target="#animation" data--601-bottom="opacity:0;" data--800-bottom="opacity:1;"
+             data--1000-bottom="opacity:1;"></div>
+
+        <div class="hand1" data-anchor-target="#animation"></div>
+        <div class="ipad" data-anchor-target="#animation"></div>
+
+
+    </div>
+</div>
+
+
+<script src="//localhost:35729/livereload.js"></script>
+
+<script type="text/javascript">
+//    var animate = $("#animation");
+//    var csstop = (animate.offset().top - $(window).height()) / 2;
+//    var topVal = (animate.offset().top - csstop);
+//    console.log('data-' + topVal + '');
+//    animate.attr('data-' + topVal + '', 'position:fixed;top:'+csstop+'px');
+
+
+</script>
+
+<script type="text/javascript" src="dist/skrollr.min.js"></script>
+
+
+
+<script type="text/javascript">
+
+
+
+    var s = skrollr.init({
+        edgeStrategy: 'set',
+        //    forceHeight: false,
+        easing: {
+            WTF: Math.random,
+            inverted: function (p) {
+                return 1 - p;
+            }
+        }
+    });
+</script>
+</body>
+
+</html>
