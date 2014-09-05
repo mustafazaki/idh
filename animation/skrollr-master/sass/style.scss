@@ -54,6 +54,15 @@
     color: #6b074b;
   }
 
+  .model {
+    @include absolute(300px, 100px, "", "");
+    font: bold 72px $proxima_nova_rgregular;
+    color: #483a80;
+    margin-top: #{-80/2}px;
+
+
+  }
+
   .render {
     @extend .sketch-h1;
     color: #c42501;
@@ -73,23 +82,30 @@
     bottom: 0;
     width: 215px;
     height: 374px;
-
-    display: none;
+    z-index: 2;
   }
 
   .ipad {
     background: url("../images/ipad.png");
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: none;
 
-    width: 848px;
-    height: 606px;
+    @include absolute("", 0, 0, "");
+    @include widthHeight(765px, 555px);
+    overflow: hidden;
+
+    &:after {
+      @include content(50px, 380px, 48px, 0px, "", "");
+      background: url("../images/ipad.png") no-repeat -715px -47px;
+      z-index: 5;
+
+    }
   }
 
   .ipad-image {
-    display: none;
+    @include absolute(55px, "", "", 205px);
+    @include widthHeight(#{510*13}px, 372px);
+    //    opacity: 0;
+    background: url("../images/ipad-image-timeline.jpg");
+
   }
 
 }

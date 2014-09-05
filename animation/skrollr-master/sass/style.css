@@ -44,6 +44,13 @@
     margin: -40px 0 0 0;
     font: bold 72px "proxima_nova_rgregular";
     color: #6b074b; }
+  .animation .model {
+    position: absolute;
+    top: 300px;
+    right: 100px;
+    font: bold 72px "proxima_nova_rgregular";
+    color: #483a80;
+    margin-top: -40px; }
   .animation .render {
     color: #c42501; }
   .animation .hand {
@@ -60,16 +67,30 @@
     bottom: 0;
     width: 215px;
     height: 374px;
-    display: none; }
+    z-index: 2; }
   .animation .ipad {
     background: url("../images/ipad.png");
     position: absolute;
-    right: 0;
     bottom: 0;
-    display: none;
-    width: 848px;
-    height: 606px; }
+    right: 0;
+    width: 765px;
+    height: 555px;
+    overflow: hidden; }
+    .animation .ipad:after {
+      content: "";
+      width: 50px;
+      height: 380px;
+      position: absolute;
+      top: 48px;
+      right: 0px;
+      background: url("../images/ipad.png") no-repeat -715px -47px;
+      z-index: 5; }
   .animation .ipad-image {
-    display: none; }
+    position: absolute;
+    left: 205px;
+    top: 55px;
+    width: 6630px;
+    height: 372px;
+    background: url("../images/ipad-image-timeline.jpg"); }
 
 /*# sourceMappingURL=style.css.map */

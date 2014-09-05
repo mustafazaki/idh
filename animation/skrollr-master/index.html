@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <title>skrollr - parallax scrolling for the masses</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
 
 
     <!--<link href="examples/fixed-positioning.css" rel="stylesheet" type="text/css"/>-->
@@ -37,6 +37,7 @@
     <h1 class="render" data-anchor-target="#animation"
         data--1850-bottom="margin-top:40px;opacity:0"
         data--1940-bottom="margin-top:-40px;opacity:1"
+        data--2200-bottom="margin-top:-40px;opacity:1"
             >RENDER</h1>
 
     <div class="sketch" data-anchor-target="#animation" data--301-bottom="opacity:0"
@@ -46,10 +47,11 @@
             ></div>
 
     <div class="design" data-anchor-target="#animation"
-         data--1840-bottom="opacity:0;"
-         data--1940-bottom="opacity:1;"
+         data--1840-bottom="opacity:0;right:60px"
+         data--1940-bottom="opacity:1;right:60px"
+         data--2450-bottom="opacity:1;right:60px"
+         data--3450-bottom="opacity:0;right:1050px"
             ></div>
-
 
 
     <div class="hand" data-anchor-target="#animation" data--601-bottom="right:-550px;opacity:0"
@@ -60,8 +62,49 @@
 
             ></div>
 
-    <div class="hand1" data-anchor-target="#animation"></div>
-    <div class="ipad" data-anchor-target="#animation"></div>
+    <div class="hand1" data-anchor-target="#animation"
+
+         data--2050-bottom="right:0px;opacity:0;bottom:-90px;transform:rotate(40deg);transform-origin:50p 50p"
+         data--2450-bottom="right:150px;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"
+         data--3450-bottom="right:1050px;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"
+         data--3650-bottom="right:1150px;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p"
+         data--3850-bottom="right:1050px;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"
+         data--4050-bottom="right:1150px;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p"
+         data--4250-bottom="right:1050px;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"
+         data--4450-bottom="right:1150px;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p"
+         data--4650-bottom="right:1050px;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"
+         data--4850-bottom="right:1150px;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p"
+         data--5050-bottom="right:1050px;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"
+         data--5250-bottom="right:1150px;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p"
+         data--5450-bottom="right:1050px;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"
+         data--5650-bottom="right:1150px;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p"
+
+
+
+            ></div>
+
+
+
+
+    <div class="ipad" data-anchor-target="#animation"
+         data--2050-bottom="left:-790px;bottom:-450px;transform:rotate(-60deg);transform-origin:50p 50p"
+         data--2400-bottom="left:0px;bottom:0px;transform:rotate(0);transform-origin:50p 50p"
+            >
+
+        <div class="ipad-image" data-anchor-target="#animation"
+             data--3000-bottom="left:625px;opacity:0;"
+             data--3450-bottom="left:205px;opacity:1;"
+             data--3650-bottom="left:-305px;opacity:1;"
+                ></div>
+
+            </div>
+
+
+    <h1 class="model" data-anchor-target="#animation"
+        data--2800-bottom="margin-top:40px;opacity:0"
+        data--3100-bottom="margin-top:-40px;opacity:1"
+            >3D MODEL</h1>
+
 
 
 </div>
