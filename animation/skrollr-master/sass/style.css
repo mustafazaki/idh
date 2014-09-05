@@ -1,0 +1,75 @@
+.span {
+  width: 100%;
+  height: 600px;
+  background: lightblue;
+  float: left; }
+
+.animation {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: #ffffff;
+  outline: 1px solid #000; }
+  .animation .absolute {
+    height: 100%;
+    width: 100%;
+    position: absolute; }
+  .animation div {
+    background-repeat: no-repeat !important; }
+  .animation h1.process {
+    font: bold 72px "proxima_nova_rgregular";
+    color: #cbcbcb;
+    width: 315px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -40px 0 0 -157.5px; }
+  .animation .sketch, .animation .design {
+    opacity: 0;
+    background: url("../images/sketch.jpg");
+    width: 518px;
+    height: 328px;
+    position: absolute;
+    bottom: 60px;
+    right: 60px; }
+  .animation .design {
+    background: url("../images/design.png"); }
+  .animation .sketch-h1, .animation .render {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    margin: -40px 0 0 0;
+    font: bold 72px "proxima_nova_rgregular";
+    color: #6b074b; }
+  .animation .render {
+    color: #c42501; }
+  .animation .hand {
+    background: url("../images/hand-2.png");
+    position: absolute;
+    bottom: -29px;
+    right: -550px;
+    width: 503px;
+    height: 341px; }
+  .animation .hand1 {
+    background: url("../images/hand-3.png");
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 215px;
+    height: 374px;
+    display: none; }
+  .animation .ipad {
+    background: url("../images/ipad.png");
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+    width: 848px;
+    height: 606px; }
+  .animation .ipad-image {
+    display: none; }
+
+/*# sourceMappingURL=style.css.map */
