@@ -12,7 +12,8 @@
   float: left;
   overflow: hidden;
   position: relative;
-  width: 1660px;
+  width: 100%;
+
     height: 600px;
   background: #ffffff;
   outline: 1px solid #000;
@@ -86,7 +87,7 @@
   }
 
   .ipad {
-    background: url("../images/ipad.png");
+    background: url("../images/ipad.jpg");
 
     @include absolute("", 0, 0, "");
     @include widthHeight(765px, 555px);
@@ -94,8 +95,17 @@
 
     &:after {
       @include content(50px, 380px, 48px, 0px, "", "");
-      background: url("../images/ipad.png") no-repeat -715px -47px;
+      background: url("../images/ipad.jpg") no-repeat -715px -47px;
       z-index: 5;
+
+    }
+
+    &:before{
+      @include content(206px,100%,0,"","",0);
+      background: url("../images/ipad.jpg") no-repeat 0px -0px;
+      z-index: 5;
+
+
 
     }
   }
@@ -103,8 +113,8 @@
   .ipad-image {
     @include absolute(55px, "", "", 205px);
     @include widthHeight(#{510*13}px, 372px);
-    //    opacity: 0;
     background: url("../images/ipad-image-timeline.jpg");
+
 
   }
 
