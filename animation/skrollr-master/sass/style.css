@@ -34,7 +34,7 @@
     height: 328px;
     position: absolute;
     bottom: 60px;
-    right: 60px; }
+    right: 5%; }
   .animation .design {
     background: url("../images/design.png"); }
   .animation .sketch-h1, .animation .render {

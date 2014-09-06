@@ -41,7 +41,7 @@
     opacity: 0;
     background: url("../images/sketch.jpg");
     @include widthHeight(518px, 328px);
-    @include absolute("", 60px, 60px, "");
+    @include absolute("", 5%, 60px, "");
   }
 
   .design {

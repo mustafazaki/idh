@@ -48,10 +48,10 @@
             ></div>
 
     <div class="design" data-anchor-target="#animation"
-         data--1840-bottom="opacity:0;right:60px"
-         data--1940-bottom="opacity:1;right:60px"
-         data--2450-bottom="opacity:1;right:60px"
-         data--3450-bottom="opacity:0;right:1050px"
+         data--1840-bottom="opacity:0;right:5%"
+         data--1940-bottom="opacity:1;right:5%"
+         data--2450-bottom="opacity:1;right:5%"
+         data--3450-bottom="opacity:0;right:70%"
             ></div>
 
 
@@ -64,30 +64,10 @@
             ></div>
 
     <div class="hand1" data-anchor-target="#animation"
-
          data--2050-bottom="right:0%;opacity:0;bottom:-90px;transform:rotate(40deg);transform-origin:50p 50p"
          data--2450-bottom="right:7%;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"
-
-
-
-
-
-
+         data--3450-bottom="right:66%;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"
             ></div>
-
-
-    <!--data--3450-bottom="right:1050px;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"-->
-    <!--data--3650-bottom="right:1150px;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p"-->
-    <!--data--3850-bottom="right:1050px;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"-->
-    <!--data--4050-bottom="right:1150px;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p"-->
-    <!--data--4250-bottom="right:1050px;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"-->
-    <!--data--4450-bottom="right:1150px;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p"-->
-    <!--data--4650-bottom="right:1050px;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"-->
-    <!--data--4850-bottom="right:1150px;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p"-->
-    <!--data--5050-bottom="right:1050px;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"-->
-    <!--data--5250-bottom="right:1150px;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p"-->
-    <!--data--5450-bottom="right:1050px;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"-->
-    <!--data--5650-bottom="right:1150px;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p"-->
 
 
     <div class="ipad" data-anchor-target="#animation"
@@ -97,19 +77,16 @@
 
         <div class="ipad-image" data-anchor-target="#animation"
              data--3000-bottom="left:625px;opacity:0;"
-             data--3450-bottom="left:205px;opacity:1;"
-             data--3650-bottom="left:-305px;opacity:1;"
-             data--3850-bottom="left:-820px;opacity:1;"
+
                 ></div>
 
-            </div>
+    </div>
 
 
     <h1 class="model" data-anchor-target="#animation"
         data--2800-bottom="margin-top:40px;opacity:0"
         data--3100-bottom="margin-top:-40px;opacity:1"
             >3D MODEL</h1>
-
 
 
 </div>
@@ -123,10 +100,50 @@
     //    var topVal = (animate.offset().top - csstop);
     //    console.log('data-' + topVal + '');
     //    animate.attr('data-' + topVal + '', 'position:fixed;top:'+csstop+'px');
+
+    //    for(var i=0;)
+    function ipad_image() {
+
+
+        var increment = 400,
+                startingKeyFrame = 3450,
+                hand1 = $(".ipad-image"),
+                attrIncrement = 515;
+
+        for (var i = 0; i < 13; i++) {
+
+//            console.log(205 - (attrIncrement * i));
+            var left = 205 - (attrIncrement * i);
+
+            hand1.attr("data--" + startingKeyFrame + "-bottom", "left:" + left + "px;opacity:1;");
+            startingKeyFrame = startingKeyFrame + increment;
+        }
+    }
+
+    function hand() {
+        var increment = 400,
+                startingKeyFrame = 3650,
+                hand1 = $(".hand1");
+
+        for (var i = 0; i < 13; i++) {
+            if (i % 2 == 0) {
+                hand1.attr("data--" + startingKeyFrame + "-bottom", "right:73%;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p");
+            }
+            else {
+                hand1.attr("data--" + startingKeyFrame + "-bottom", "right:66%;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50pp");
+            }
+            startingKeyFrame = startingKeyFrame + increment;
+        }
+    }
+
+
+    hand();
+    ipad_image();
+
     $(document).ready(function () {
 
         var nice = $("html").niceScroll({
-            scrollspeed:40
+            scrollspeed: 40
 
         });  // The document page (body)
 
