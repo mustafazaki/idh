@@ -20,7 +20,7 @@
 
 <div class="span">1</div>
 <div class="span">2</div>
-<div class="animation" id="animation" data-0="position:relative;" data-1200="position:fixed;">
+<div class="animation" id="animation" data-emit-events>
 
 
     <h1 class="process" data-anchor-target="#animation"
@@ -101,22 +101,26 @@
 
 
 </div>
+<div class="span" id="span">3</div>
 
 
 <!--<script src="//localhost:35729/livereload.js"></script>-->
 
 <script type="text/javascript">
-    //    var animate = $("#animation");
-    //    var csstop = (animate.offset().top - $(window).height()) / 2;
-    //    var topVal = (animate.offset().top - csstop);
-    //    console.log('data-' + topVal + '');
-    //    animate.attr('data-' + topVal + '', 'position:fixed;top:'+csstop+'px');
+    var animate = $("#animation");
+    //    var csstop = (animate.offset().top - $(window).height());
+    var topVal = (animate.offset().top );
+
+    var newVal = topVal - 1;
+    animate.attr('data-' + newVal + '', 'position:relative;');
+    animate.attr('data-' + topVal + '', 'position:fixed;');
+
 
     //    for(var i=0;)
     function ipad_image() {
 
 
-        var increment = 300,
+        var increment = 100,
                 startingKeyFrame = 3100,
                 hand1 = $(".ipad-image"),
                 delay = 0.1;
@@ -177,6 +181,20 @@
         });  // The document page (body)
 
 
+        $(window).scroll(function () {
+            console.log($(window).scrollTop());
+            if($(window).scrollTop() === animate.offset().top){
+            console.log("if");
+
+                $("#span").css("margin-top","600px");
+            }
+            else{
+            //console.log("else")
+            }
+
+
+        });
+
     });
 
 </script>
@@ -194,8 +212,22 @@
             vibrate: function (p) {
                 return Math.sin(p * 10 * Math.PI);
             }
+        },
+        keyframe: function (element, name, direction) {
+//            name will be one of data500, dataTopBottom, data_offsetCenter
+            //    console.log(element);
+            console.log(name);
+            console.log(direction);
+//            console.log("fn")
+
+
+            console.log(animate.offset().top);
+
+
         }
     });
+
+    console.log($(document).height())
 </script>
 </body>
 
