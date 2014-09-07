@@ -98,6 +98,33 @@
     position: absolute;
     left: 205px;
     top: 55px;
-    width: 6630px;
-    height: 372px;
-    background: url("../images/ipad-image-timeline.jpg"); }
+    width: 510px;
+    height: 372px; }
+  .animation .ipad-image-1 {
+    background: url(../images/image-ipad-1.jpg) no-repeat 0 0; }
+  .animation .ipad-image-2 {
+    background: url(../images/image-ipad-2.jpg) no-repeat 0 0; }
+  .animation .ipad-image-3 {
+    background: url(../images/image-ipad-3.jpg) no-repeat 0 0; }
+  .animation .ipad-image-4 {
+    background: url(../images/image-ipad-4.jpg) no-repeat 0 0; }
+  .animation .ipad-image-5 {
+    background: url(../images/image-ipad-5.jpg) no-repeat 0 0; }
+  .animation .ipad-image-6 {
+    background: url(../images/image-ipad-6.jpg) no-repeat 0 0; }
+  .animation .ipad-image-7 {
+    background: url(../images/image-ipad-7.jpg) no-repeat 0 0; }
+  .animation .ipad-image-8 {
+    background: url(../images/image-ipad-8.jpg) no-repeat 0 0; }
+  .animation .ipad-image-9 {
+    background: url(../images/image-ipad-9.jpg) no-repeat 0 0; }
+  .animation .ipad-image-10 {
+    background: url(../images/image-ipad-10.jpg) no-repeat 0 0; }
+  .animation .ipad-image-11 {
+    background: url(../images/image-ipad-11.jpg) no-repeat 0 0; }
+  .animation .ipad-image-12 {
+    background: url(../images/image-ipad-12.jpg) no-repeat 0 0; }
+  .animation .ipad-image-13 {
+    background: url(../images/image-ipad-13.jpg) no-repeat 0 0; }
+
+/*# sourceMappingURL=style.css.map */

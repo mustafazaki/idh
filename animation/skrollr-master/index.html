@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <title>skrollr - parallax scrolling for the masses</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="dist/jquery.nicescroll.min.js"></script>
 
 
@@ -66,7 +66,8 @@
     <div class="hand1" data-anchor-target="#animation"
          data--2050-bottom="right:0%;opacity:0;bottom:-90px;transform:rotate(40deg);transform-origin:50p 50p"
          data--2450-bottom="right:7%;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"
-         data--3450-bottom="right:66%;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"
+         data--3000-bottom="right:40%;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"
+         data--3200-bottom="right:60%;opacity:0;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p"
             ></div>
 
 
@@ -75,10 +76,20 @@
          data--2400-bottom="left:0px;bottom:0px;transform:rotate(0);transform-origin:50p 50p"
             >
 
-        <div class="ipad-image" data-anchor-target="#animation"
-             data--3000-bottom="left:625px;opacity:0;"
 
-                ></div>
+        <div data-anchor-target="#animation" class="ipad-image ipad-image-1"></div>
+        <div data-anchor-target="#animation" class="ipad-image ipad-image-2"></div>
+        <div data-anchor-target="#animation" class="ipad-image ipad-image-3"></div>
+        <div data-anchor-target="#animation" class="ipad-image ipad-image-4"></div>
+        <div data-anchor-target="#animation" class="ipad-image ipad-image-5"></div>
+        <div data-anchor-target="#animation" class="ipad-image ipad-image-6"></div>
+        <div data-anchor-target="#animation" class="ipad-image ipad-image-7"></div>
+        <div data-anchor-target="#animation" class="ipad-image ipad-image-8"></div>
+        <div data-anchor-target="#animation" class="ipad-image ipad-image-9"></div>
+        <div data-anchor-target="#animation" class="ipad-image ipad-image-10"></div>
+        <div data-anchor-target="#animation" class="ipad-image ipad-image-11"></div>
+        <div data-anchor-target="#animation" class="ipad-image ipad-image-12"></div>
+        <div data-anchor-target="#animation" class="ipad-image ipad-image-13"></div>
 
     </div>
 
@@ -105,45 +116,63 @@
     function ipad_image() {
 
 
-        var increment = 400,
-                startingKeyFrame = 3450,
+        var increment = 300,
+                startingKeyFrame = 3100,
                 hand1 = $(".ipad-image"),
-                attrIncrement = 515;
+                delay = 0.1;
 
         for (var i = 0; i < 13; i++) {
 
 //            console.log(205 - (attrIncrement * i));
-            var left = 205 - (attrIncrement * i);
 
-            hand1.attr("data--" + startingKeyFrame + "-bottom", "left:" + left + "px;opacity:1;");
+            //data--3200-bottom="opacity:0"
+
+//            hand1.attr("data--3200-bottom", "opacity:0");
+//
+            var firstAttr = startingKeyFrame,
+                    secondAttr = startingKeyFrame + delay,
+                    thirdAttr = startingKeyFrame + increment;
+
+
+            hand1.eq(i).attr("data--" + firstAttr + "-bottom", "display:none");
+            hand1.eq(i).attr("data--" + secondAttr + "-bottom", "display:block");
+            hand1.eq(i).attr("data--" + thirdAttr + "-bottom", "display:none");
+
+            //  console.log(startingKeyFrame);
+
+
             startingKeyFrame = startingKeyFrame + increment;
+
+
+//            console.log(startingKeyFrame + increment);
+
         }
     }
 
-    function hand() {
-        var increment = 400,
-                startingKeyFrame = 3650,
-                hand1 = $(".hand1");
-
-        for (var i = 0; i < 13; i++) {
-            if (i % 2 == 0) {
-                hand1.attr("data--" + startingKeyFrame + "-bottom", "right:73%;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p");
-            }
-            else {
-                hand1.attr("data--" + startingKeyFrame + "-bottom", "right:66%;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50pp");
-            }
-            startingKeyFrame = startingKeyFrame + increment;
-        }
-    }
-
-
-    hand();
+    //    function hand() {
+    //        var increment = 400,
+    //                startingKeyFrame = 3800,
+    //                hand1 = $(".hand1");
+    //
+    //        for (var i = 0; i <18; i++) {
+    //            if (i % 2 == 0) {
+    //                hand1.attr("data--" + startingKeyFrame + "-bottom", "right:73%;opacity:1;bottom:-70px;transform:rotate(-15deg);transform-origin:50p 50p");
+    //            }
+    //            else {
+    //                hand1.attr("data--" + startingKeyFrame + "-bottom", "right:66%;opacity:1;bottom:-50px;transform:rotate(0deg);transform-origin:50p 50p");
+    //            }
+    //            startingKeyFrame = startingKeyFrame + increment;
+    //        }
+    //    }
+    //
+    //
+    //    hand();
     ipad_image();
 
     $(document).ready(function () {
 
         var nice = $("html").niceScroll({
-            scrollspeed: 40
+            scrollspeed: 120
 
         });  // The document page (body)
 

@@ -110,12 +110,29 @@
     }
   }
 
+
+
   .ipad-image {
     @include absolute(55px, "", "", 205px);
-    @include widthHeight(#{510*13}px, 372px);
-    background: url("../images/ipad-image-timeline.jpg");
+    @include widthHeight(510px, 372px);
+//    opacity: 0;
+  }
+
+  $columns: 13;
+
+  @for $i from 1 through $columns {
+    .ipad-image-#{$i} {
+      background: url(../images/image-ipad-#{$i}.jpg) no-repeat 0 0;
+      //z-index: #{14-$i};
 
 
+
+
+
+    }
   }
 
 }
+
+
+
