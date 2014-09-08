@@ -1,0 +1,71 @@
+@import "../../bourbon/bourbon";
+@import "_functions";
+
+@media only screen and (max-width: 1000px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .home .logo {
+    float: none;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .about {
+    height: auto;
+    padding-bottom: 20px;
+    h2 {
+      padding: 10px 0;
+      margin: 0 auto 15px;
+      font-size: 24px;
+
+    }
+
+    p {
+      font-size: 20px;
+    }
+    .services ul {
+      margin: 0;
+      li {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+    }
+  }
+
+  #services {
+    h2 {
+      font-size: 30px;
+      padding: 20px 0;
+      width: 90%;
+    }
+  }
+  .animation {
+    display: none;
+  }
+  .ourClient .client h2 {
+    padding: 10px 0;
+    margin: 0 auto 15px;
+    width: 100%;
+    font-size: 24px;
+  }
+
+  .home h2 {
+    @include verticalCenter();
+    padding: 0;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+  .mobile {
+    display: block;
+  }
+
+}
+
+
+

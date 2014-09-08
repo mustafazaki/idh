@@ -2,27 +2,37 @@ $(document).ready(function(){
   	
 	$('.slider1').bxSlider({
 		slideWidth: 230,
-		minSlides: 1,
+		minSlides: 4,
 		maxSlides: 4,
-		infiniteLoop: false
+		infiniteLoop: false,
+        slideMargin:20
   	});
 	// On scroll Logo change	
-	$(window).scroll(function() {
-		var scroll = $(window).scrollTop();
-		scroll >= 1 ? $(".home .logo").addClass("logoInner") : $(".home .logo").removeClass("logoInner")
-	});
+
+//    changeMenuStyleOnScroll();
+
 	// Home height 100%
 	$('.home, .contact').height($(window).height());
 	$('.home video').width($(window).width());
 
 });
 
-// On scroll nav bg color change			
-var a = $(".home"), b = a.outerHeight();
+// On scroll nav bg color change
+
+
  $(document).scroll(function() {
-      var c = (b - window.scrollY) / b;
-        c >= 0 && ($("nav").css("background-color", "rgba(51,51,51," + (1.1 - c) + ")"));
+    // changeMenuStyleOnScroll();
 });
+
+function changeMenuStyleOnScroll() {
+    var a = $(".home"), b = a.outerHeight();
+    var scroll = $(window).scrollTop();
+    scroll >= 1 ? $(".home .logo").addClass("logoInner") : $(".home .logo").removeClass("logoInner")
+    var c = (b - window.scrollY) / b;
+
+    c >= 0 && ($("nav").css("background-color", "rgba(51,51,51," + (1.1 - c) + ")"));
+}
+
 
 // remove video functionality for mobile
 if(Modernizr.appleios) {

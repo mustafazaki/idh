@@ -1,74 +1,57 @@
-@import "functions";
+@import "_functions";
 
-.span {
-  width: 100%;
-  height: 600px;
-  background: lightblue;
-  float: left;
-
-}
 
 .animation {
   float: left;
-
   position: relative;
   width: 100%;
-
   background: #ffffff;
+  font-size: 72px;
 
   .scene {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+    @include absolute(0,"","",0);
+
 
     overflow: hidden;
-    width: 100%;
+
+    @include widthHeight(100%,600px);
     background: #ffffff;
-    outline: 1px solid #000;
-    height: 600px;
-
   }
 
-  .absolute {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
   div {
     background-repeat: no-repeat !important;
   }
 
   h1.process {
-
-    font: bold 72px $proxima_nova_rgregular;
+    font: bold 100% $proxima_nova_rgregular;
     color: #cbcbcb;
     @include widthHeight(315px, 80px);
     @include absolute(50%, "", "", 50%);
     margin: #{-80 / 2}px 0 0 #{-315 / 2}px;
-
   }
 
   .sketch {
     opacity: 0;
-    background: url("../images/sketch.jpg");
+    background: url("../Images/sketch.jpg");
     @include widthHeight(518px, 328px);
     @include absolute("", 5%, 60px, "");
   }
 
   .design {
     @extend .sketch;
-    background: url("../images/design.png");
+    background: url("../Images/design.png");
   }
   .sketch-h1 {
     @include absolute(50%, "", "", 10%);
     margin: #{-80 / 2}px 0 0 0;
-    font: bold 72px $proxima_nova_rgregular;
+    font: bold 100% $proxima_nova_rgregular;
     color: #6b074b;
   }
 
   .model {
     @include absolute(300px, 100px, "", "");
-    font: bold 72px $proxima_nova_rgregular;
+    font: bold 100% $proxima_nova_rgregular;
     color: #483a80;
     margin-top: #{-80/2}px;
 
@@ -80,14 +63,14 @@
   }
 
   .hand {
-    background: url("../images/hand-2.png");
+    background: url("../Images/hand-2.png");
     //@include absolute("", -174px, -29px, "");
     @include absolute("", -550px, -29px, "");
     @include widthHeight(503px, 341px);
   }
 
   .hand1 {
-    background: url("../images/hand-3.png");
+    background: url("../Images/hand-3.png");
     position: absolute;
     right: 0;
     bottom: 0;
@@ -97,7 +80,7 @@
   }
 
   .ipad {
-    background: url("../images/ipad.jpg");
+    background: url("../Images/ipad.jpg");
 
     @include absolute("", 0, 0, "");
     @include widthHeight(765px, 555px);
@@ -105,14 +88,14 @@
 
     &:after {
       @include content(50px, 380px, 48px, 0px, "", "");
-      background: url("../images/ipad.jpg") no-repeat -715px -47px;
+      background: url("../Images/ipad.jpg") no-repeat -715px -47px;
       z-index: 5;
 
     }
 
     &:before {
       @include content(206px, 100%, 0, "", "", 0);
-      background: url("../images/ipad.jpg") no-repeat 0px -0px;
+      background: url("../Images/ipad.jpg") no-repeat 0px -0px;
       z-index: 5;
 
     }
@@ -128,7 +111,7 @@
 
   @for $i from 1 through $columns {
     .ipad-image-#{$i} {
-      background: url(../images/image-ipad-#{$i}.jpg) no-repeat 0 0;
+      background: url(../Images/image-ipad-#{$i}.jpg) no-repeat 0 0;
       //z-index: #{14-$i};
 
     }

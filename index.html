@@ -5,13 +5,12 @@
     <title>..::Welcome to ::..</title>
     <meta http-equiv="content-language" content="en"/>
     <meta name="author" content="Waqas Khan, Ovrlod"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta name="robots" content="all"/>
     <meta name="description" content="ETA"/>
     <meta name="keywords" content="ETA"/>
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="Common/Stylesheets/default.css">
-    <link rel="stylesheet" type="text/css" href="Common/sass/style.css">
-    <link rel="stylesheet" type="text/css" href="Common/Stylesheets/responsive.css">
+    <link rel="stylesheet" type="text/css" href="Common/sass/default.css">
 </head>
 <body>
 <!--Wrapper -->
@@ -19,23 +18,31 @@
 <!-- Home -->
 <section id="home" class="home">
     <!-- Navigation -->
+    <div class="mobile-header mobile">
+        <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
+    </div>
     <nav>
-        <!-- Logo -->
-        <a href="javascript:void(0)#home" class="logo scroll"></a>
+        <a href="#home" class="logo scroll"></a>
         <ul>
-            <li><a href="javascript:void(0)#about" class="scroll">About us</a></li>
-            <li><a href="javascript:void(0)#services" class="scroll">Services</a></li>
+            <li><a href="#about" class="scroll">About us</a></li>
+            <li><a href="#services" class="scroll">Services</a></li>
             <li><a href="javascript:void(0)">Enquiry</a></li>
-            <li><a href="javascript:void(0)#contact" class="scroll">Contact Us</a></li>
+            <li><a href="#contact" class="scroll">Contact Us</a></li>
         </ul>
     </nav>
+
+
+    <div class="site-overlay"></div>
+
+
     <h2 class="quotes">Inspired to Design</h2>
 
     <h2 class="quotes"> Inspired to Create</h2>
 
     <h2 class="quotes">Inspired to Execute</h2>
     <!-- scrollBtn -->
-    <a href="javascript:void(0)#about" class="scrollBtn scroll"></a>
+    <a href="#about" class="scrollBtn scroll desktop"></a>
+
     <!-- Video Overlay-->
     <div class="videoOverlay"></div>
     <!--Video autoplay-->
@@ -68,11 +75,14 @@
 </section>
 
 <!-- ourClient -->
-<section id="services" class="ourClient">
+<section id="services">
     <h2>“Perfection is achieved, not when
         there is nothing more to add,
         but when there is nothing left to take away.”</h2>
     <!-- Client -->
+</section>
+
+<section id="clients" class="ourClient">
     <div class="client">
         <h2>SOME OF OUR CLIENTS</h2>
 
@@ -96,9 +106,9 @@
             >
 
         <h1 class="process" data-anchor-target="#scene"
-            data-bottom-top="transform:scale(0);opacity:1"
-            data-bottom="transform:scale(1);opacity:1"
-            data--300-bottom="transform:scale(10);opacity:0"
+            data--100-bottom="transform:scale(0);opacity:1"
+            data--300-bottom="transform:scale(1);opacity:1"
+            data--400-bottom="transform:scale(10);opacity:0"
                 >PROCESS</h1>
 
         <h1 class="sketch-h1" data-anchor-target="#scene" data--301-bottom="opacity:0;margin-top:-80px"
@@ -196,15 +206,17 @@
     <h2>Contact</h2>
     <!-- Map -->
     <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28911.30699021496!2d55.146657100000006!3d25.07092505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sInspired+Design+House%2C+Jumeirah+Lakes+Towers%2C+Dubai!5e0!3m2!1sen!2s!4v1409739772982"
-                width="485" height="485" frameborder="0" style="border:0"></iframe>
+        <!--   <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28911.30699021496!2d55.146657100000006!3d25.07092505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sInspired+Design+House%2C+Jumeirah+Lakes+Towers%2C+Dubai!5e0!3m2!1sen!2s!4v1409739772982"
+                   width="485" height="485" frameborder="0" style="border:0"></iframe>-->
+
+        <img src="Common/Images/Backgrounds/3dModling.jpg" alt=""/>
     </div>
     <!-- Form -->
     <div class="form">
         <fieldset>
-            <input type="text" name="What is your name?" value="" placeholder="What is your name?">
-            <input type="text" name="What is your email?" value="" placeholder="What is your email?">
-            <textarea name="Please enter your message" value="" placeholder="Please enter your message"></textarea>
+            <input type="text" placeholder="What is your name?">
+            <input type="email" placeholder="What is your email?">
+            <textarea resize="false" placeholder="Please enter your message"></textarea>
             <input type="submit" name="Send" value="Send">
         </fieldset>
     </div>
@@ -229,6 +241,9 @@
 <script type="text/javascript" src="Common/JavaScript/jquery.nicescroll.min.js"></script>
 <script type="text/javascript" src="Common/JavaScript/skrollr.min.js"></script>
 <script type="text/javascript" src="Common/JavaScript/animation.js"></script>
-<script type="text/javascript" src="Common/JavaScript/Defult.js"></script>
+<script type="text/javascript" src="Common/JavaScript/pushy.js"></script>
+<script type="text/javascript" src="Common/JavaScript/default.js"></script>
+<script src="//localhost:35729/livereload.js"></script>
+
 </body>
 </html>
