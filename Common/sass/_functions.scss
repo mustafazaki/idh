@@ -1,0 +1,101 @@
+$proxima_nova_rgregular :"proxima_nova_rgregular";
+
+////////////mixins////////////////
+@mixin overlay($z-index) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  @if ($z-index !="") {
+    z-index: $z-index
+  }
+}
+
+@mixin absolute($top, $right, $bottom, $left) {
+  position: absolute;
+  @if ($left != "") {
+    left: $left;
+  }
+  @if ($top != "") {
+    top: $top;
+  }
+  @if ($bottom != "") {
+    bottom: $bottom;
+
+  }
+  @if ($right != "") {
+    right: $right;
+  }
+}
+
+@mixin fixed($top, $right, $bottom, $left) {
+  position: fixed;
+  @if ($left != "") {
+    left: $left;
+  }
+  @if ($top != "") {
+    top: $top;
+  }
+  @if ($bottom != "") {
+    bottom: $bottom;
+
+  }
+  @if ($right != "") {
+    right: $right;
+  }
+}
+
+@mixin widthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin border($width, $color) {
+  border: $width solid $color;
+  -webkit-box-sizing: border-box;
+}
+
+@mixin content($width, $height, $top, $right, $bottom, $left) {
+  content: "";
+  @include widthHeight($width, $height);
+  @include absolute($top, $right, $bottom, $left)
+
+}
+
+@mixin verticalCenter() {
+  @include absolute(50%, "", "", 50%);
+  max-width: 100%;
+  max-height: 100%;
+  @include transform(translate(-50%, -50%))
+}
+
+@mixin placeholderColor($color) {
+
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  :-moz-placeholder {
+    /* Firefox 18- */
+    color: $color;
+  }
+
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $color;
+  }
+
+  :-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+//$percentage: (0, 20, 40, 60, 80, 100);
+//@each $value in $percentage {
+//  .fanous-#{$value} {
+//    background: url(#{$base-url-en}/bg-#{$value}.jpg) fixed repeat 0 0/cover;
+//  }
+//
+//}
+
+////////////mixins////////////////
