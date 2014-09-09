@@ -2,7 +2,8 @@
 @import "functions";
 
 .bt-menu-trigger {
-  position: absolute;
+  position: fixed;
+  -webkit-transform: translateZ(0);
   top: 5px;
   left: 8px;
   z-index: 6;
