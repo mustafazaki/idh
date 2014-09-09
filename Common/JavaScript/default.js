@@ -8,39 +8,86 @@ var idh = {
     resizeTimeoutID: null,
     quoteIndex: -1,
 
+//    initBxSlider: function (isResizing) {
+//        if (isResizing != true) {
+//            idh.eventSlider = $('.event-slider').bxSlider();
+//            idh.clientSlider = $('.client-slider').bxSlider();
+//
+//        }
+//
+//
+//        var sliders = [idh.eventSlider, idh.clientSlider];
+//        if (!idh.isMobile) {
+//            for (var i = 0; i < sliders.length; i++) {
+//                sliders[i].reloadSlider({
+//                    slideWidth: 230,
+//                    minSlides: 4,
+//                    maxSlides: 4,
+//                    infiniteLoop: false,
+//                    slideMargin: 20
+//                });
+//            }
+//            console.log("if")
+//        }
+//        else {
+//            for (var i = 0; i < sliders.length; i++) {
+//                sliders[i].reloadSlider({
+//                    slideWidth: 230,
+//                    minSlides: 2,
+//                    maxSlides: 2,
+//                    infiniteLoop: false,
+//                    slideMargin: 10
+//                });
+//                console.log(sliders[i])
+//            }
+//            //  console.log("Esle")
+//        }
+//    },
+
+
     initBxSlider: function (isResizing) {
-        if (isResizing != true) {
-            idh.eventSlider = $('.event-slider').bxSlider();
-            idh.clientSlider = $('.client-slider').bxSlider();
 
-        }
-
-
-        var sliders = [idh.eventSlider, idh.clientSlider];
         if (!idh.isMobile) {
-            for (var i = 0; i < sliders.length; i++) {
-                sliders[i].reloadSlider({
-                    slideWidth: 230,
-                    minSlides: 4,
-                    maxSlides: 4,
-                    infiniteLoop: false,
-                    slideMargin: 20
-                });
-            }
-            console.log("if")
+
+            idh.eventSlider = $('.event-slider').bxSlider({
+
+                slideWidth: 230,
+                minSlides: 4,
+                maxSlides: 4,
+                infiniteLoop: false,
+                slideMargin: 20
+
+            });
+            idh.clientSlider = $('.client-slider').bxSlider({
+
+                slideWidth: 230,
+                minSlides: 4,
+                maxSlides: 4,
+                infiniteLoop: false,
+                slideMargin: 20
+
+            });
+
         }
         else {
-            for (var i = 0; i < sliders.length; i++) {
-                sliders[i].reloadSlider({
-                    slideWidth: 230,
-                    minSlides: 2,
-                    maxSlides: 2,
-                    infiniteLoop: false,
-                    slideMargin: 10
-                });
-                console.log(sliders[i])
-            }
-            //  console.log("Esle")
+            idh.eventSlider = $('.event-slider').bxSlider({
+
+                slideWidth: 230,
+                minSlides: 2,
+                maxSlides: 2,
+                infiniteLoop: false,
+                slideMargin: 10
+
+            });
+            idh.clientSlider = $('.client-slider').bxSlider({
+
+                slideWidth: 230,
+                minSlides: 2,
+                maxSlides: 2,
+                infiniteLoop: false,
+                slideMargin: 10
+
+            });
         }
     },
 
@@ -114,9 +161,9 @@ var idh = {
 
     init: function () {
         idh.detectMobile();
-        setTimeout(function () {
-            idh.initBxSlider();
-        }, 100);
+        // setTimeout(function () {
+        idh.initBxSlider();
+        //  }, 100);
 
 
 //        idh.initNiceScroll();

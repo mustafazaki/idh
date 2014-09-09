@@ -99,7 +99,7 @@ var animation = {
         animation.setAttrOfAnimateAndScene();
         animation.initSkrollr();
 
-        animation.debug();
+        //animation.debug();
     }
 };
 
