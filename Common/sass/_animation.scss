@@ -1,23 +1,18 @@
 @import "_functions";
 
-
 .animation {
   float: left;
   position: relative;
   width: 100%;
-  background: #ffffff;
+  background: #fff;
   font-size: 72px;
 
-  .scene {
-
-    @include absolute(0,"","",0);
-
-
-    overflow: hidden;
-
-    @include widthHeight(100%,600px);
-    background: #ffffff;
-  }
+    .scene {
+      @include absolute(0, "", "", 0);
+      overflow: hidden;
+      @include widthHeight(100%, 600px);
+      background: #ffffff;
+    }
 
   div {
     background-repeat: no-repeat !important;

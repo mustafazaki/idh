@@ -638,14 +638,14 @@ section.home {
 
 /*model
 -------------------------------------------- */
-section.model {
+.model {
   height: 606px;
   background: url(../Images/Backgrounds/3dModling.jpg) no-repeat center center;
 }
 
 /*Event
 -------------------------------------------- */
-section.event {
+.event {
   border-top: 1px solid #000;
   height: 1115px;
   background: url(../Images/Backgrounds/eventBg.jpg) no-repeat center 0;
@@ -1032,40 +1032,31 @@ footer .socialNetwork {
   margin: 88px 0 0 0;
 }
 
-footer .fb {
+footer .socialNetwork a {
   float: right;
   width: 64px;
   height: 63px;
-  background: url(../Images/Buttons/socialIcon.png) no-repeat left 0;
   padding: 0;
   margin: 0 9px 0 0;
+}
+
+footer .fb {
+  background: url(../Images/Buttons/socialIcon.png) no-repeat left 0;
 }
 
 footer .twitter {
-  float: right;
-  width: 64px;
-  height: 63px;
   background: url(../Images/Buttons/socialIcon.png) no-repeat -73px 0;
-  padding: 0;
-  margin: 0 9px 0 0;
+
 }
 
 footer .pint {
-  float: right;
-  width: 64px;
-  height: 63px;
   background: url(../Images/Buttons/socialIcon.png) no-repeat -141px 0;
-  padding: 0;
-  margin: 0 9px 0 0;
+
 }
 
 footer .google {
-  float: right;
-  width: 64px;
-  height: 63px;
   background: url(../Images/Buttons/socialIcon.png) no-repeat right 0;
-  padding: 0;
-  margin: 0 9px 0 0;
+
 }
 
 footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hover, .home .logoInner:hover {
