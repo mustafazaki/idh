@@ -4,15 +4,13 @@
   float: left;
   position: relative;
   width: 100%;
-  background: #fff;
   font-size: 72px;
+  .scene {
+    @include absolute(0, "", "", 0);
+    overflow: hidden;
+    @include widthHeight(100%, 600px);
 
-    .scene {
-      @include absolute(0, "", "", 0);
-      overflow: hidden;
-      @include widthHeight(100%, 600px);
-      background: #ffffff;
-    }
+  }
 
   div {
     background-repeat: no-repeat !important;
@@ -44,7 +42,7 @@
     color: #6b074b;
   }
 
-  .model {
+  .model-h1 {
     @include absolute(300px, 100px, "", "");
     font: bold 100% $proxima_nova_rgregular;
     color: #483a80;

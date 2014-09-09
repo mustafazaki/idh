@@ -15,6 +15,7 @@
 <body>
 <!--Wrapper -->
 <div class="Wrapper">
+<div id="debug" style="display: none;position: fixed;right: 0;top: 0;background: green;z-index:9999;color: #fff;font-size: 20px;"></div>
 <!-- Home -->
 <section id="home" class="home">
     <!-- Navigation -->
@@ -86,7 +87,7 @@
     <div class="client">
         <h2>SOME OF OUR CLIENTS</h2>
 
-        <div class="slider1">
+        <div class="slider1 client-slider">
             <div class="slide"><img src="Common/Images/ClientLogo/03.jpg"></div>
             <div class="slide"><img src="Common/Images/ClientLogo/02.jpg"></div>
             <div class="slide"><img src="Common/Images/ClientLogo/01.jpg"></div>
@@ -102,7 +103,12 @@
 <!-- 3d Model -->
 <!--<section class="js-slide model"></section>-->
 <section class="animation" id="animation" data-emit-events>
-    <div class="scene" id="scene" data-anchor-target="#animation"
+    <div class="scene" id="scene" data-0="position:relative;background:red" data-bottom-top="position:absolute;background:grey;top:0px"
+         data--100-bottom="position:fixed;background:green;top:137px"
+         data--4400-bottom="position:fixed;background:green;top:137px"
+         data--4401-bottom="position:fixed;background:white;top:137px"
+         data--5500-bottom="position:fixed;background:white;top:-601px"
+
             >
 
         <h1 class="process" data-anchor-target="#scene"
@@ -176,7 +182,7 @@
         </div>
 
 
-        <h1 class="model" data-anchor-target="#scene"
+        <h1 class="model-h1" data-anchor-target="#scene"
             data--2800-bottom="margin-top:40px;opacity:0"
             data--3100-bottom="margin-top:-40px;opacity:1"
                 >3D MODEL</h1>
@@ -187,7 +193,7 @@
 <section class="event">
     <h2>events of the month</h2>
 
-    <div class="slider1">
+    <div class="slider1 event-slider">
         <div class="slide"><img src="Common/Images/ClientLogo/05.jpg"></div>
         <div class="slide"><img src="Common/Images/ClientLogo/06.jpg"></div>
         <div class="slide"><img src="Common/Images/ClientLogo/07.jpg"></div>

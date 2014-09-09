@@ -8,15 +8,15 @@ var animation = {
 
 
     setAttrOfAnimateAndScene: function () {
-        animation.animate.css("height", (animation.animationEndKeyFrame + 250) + "px");
+        animation.animate.css("height", (animation.animationEndKeyFrame+800) + "px");
         var height = animation.scene.height(),
             top = (animation.windowHeight - height) / 2;
 //        console.log(top)
 
-        animation.scene.attr("data-0", "position:relative;top:0px;");
-        animation.scene.attr("data--230-top", "position:fixed;top:" + top + "px;");
-        animation.scene.attr("data--" + (animation.animationEndKeyFrame - height) + "-top", "position:fixed;top:" + top + "px;");
-        animation.scene.attr("data--" + (animation.animationEndKeyFrame) + "-top", "position:fixed;top:-" + (height + 1) + "px;");
+//        animation.scene.attr("data-0", "position:relative;top:0px;");
+//        animation.scene.attr("data-600-top", "position:fixed;top:" + top + "px;");
+//        animation.scene.attr("data--" + (animation.animationEndKeyFrame - height) + "-top", "position:fixed;top:" + top + "px;");
+//        animation.scene.attr("data-bottom", "position:fixed;top:-" + (height + 1) + "px;");
 
     },
 
@@ -36,12 +36,7 @@ var animation = {
         }
         animation.animationEndKeyFrame = startingKeyFrame;
     },
-    initNiceScroll: function () {
-        var nice = $("html").niceScroll({
-            scrollspeed: 120
 
-        });
-    },
     addEventListner: function () {
 
         var top = animation.animate.offset().top,
@@ -88,19 +83,28 @@ var animation = {
         });
     },
 
+    debug: function () {
+        $(window).scroll(function () {
+
+            $("#debug").show().text(animation.scene.offset().top - $(window).scrollTop())
+
+        })
+
+
+    },
+
+
     init: function () {
         animation.setAttrOfIpadImage();
         animation.setAttrOfAnimateAndScene();
-        animation.initNiceScroll();
         animation.initSkrollr();
-        //     animation.addEventListner();
+
+        animation.debug();
     }
 };
 
 
-$(document).ready(function () {
-    animation.init();
-});
+
 
 
 
