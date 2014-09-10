@@ -8,87 +8,44 @@ var idh = {
     resizeTimeoutID: null,
     quoteIndex: -1,
 
-//    initBxSlider: function (isResizing) {
-//        if (isResizing != true) {
-//            idh.eventSlider = $('.event-slider').bxSlider();
-//            idh.clientSlider = $('.client-slider').bxSlider();
-//
-//        }
-//
-//
-//        var sliders = [idh.eventSlider, idh.clientSlider];
-//        if (!idh.isMobile) {
-//            for (var i = 0; i < sliders.length; i++) {
-//                sliders[i].reloadSlider({
-//                    slideWidth: 230,
-//                    minSlides: 4,
-//                    maxSlides: 4,
-//                    infiniteLoop: false,
-//                    slideMargin: 20
-//                });
-//            }
-//            console.log("if")
-//        }
-//        else {
-//            for (var i = 0; i < sliders.length; i++) {
-//                sliders[i].reloadSlider({
-//                    slideWidth: 230,
-//                    minSlides: 2,
-//                    maxSlides: 2,
-//                    infiniteLoop: false,
-//                    slideMargin: 10
-//                });
-//                console.log(sliders[i])
-//            }
-//            //  console.log("Esle")
-//        }
-//    },
-
-
     initBxSlider: function (isResizing) {
-
-        if (!idh.isMobile) {
-
-            idh.eventSlider = $('.event-slider').bxSlider({
-
-                slideWidth: 230,
-                minSlides: 4,
-                maxSlides: 4,
-                infiniteLoop: false,
-                slideMargin: 20
-
-            });
-            idh.clientSlider = $('.client-slider').bxSlider({
-
-                slideWidth: 230,
-                minSlides: 4,
-                maxSlides: 4,
-                infiniteLoop: false,
-                slideMargin: 20
-
-            });
+        if (isResizing != true) {
+            idh.eventSlider = $('.event-slider').bxSlider();
+            idh.clientSlider = $('.client-slider').bxSlider();
 
         }
-        else {
-            idh.eventSlider = $('.event-slider').bxSlider({
 
-                slideWidth: 230,
-                minSlides: 2,
-                maxSlides: 2,
-                infiniteLoop: false,
-                slideMargin: 10
 
-            });
-            idh.clientSlider = $('.client-slider').bxSlider({
+        var sliders = [idh.eventSlider, idh.clientSlider];
+        setTimeout(function () {
 
-                slideWidth: 230,
-                minSlides: 2,
-                maxSlides: 2,
-                infiniteLoop: false,
-                slideMargin: 10
 
-            });
-        }
+            if (!idh.isMobile) {
+                for (var i = 0; i < sliders.length; i++) {
+                    sliders[i].reloadSlider({
+                        slideWidth: 230,
+                        minSlides: 4,
+                        maxSlides: 4,
+                        infiniteLoop: false,
+                        slideMargin: 20
+                    });
+                }
+
+            }
+            else {
+                for (var i = 0; i < sliders.length; i++) {
+                    sliders[i].reloadSlider({
+                        slideWidth: 230,
+                        minSlides: 2,
+                        maxSlides: 2,
+                        infiniteLoop: false,
+                        slideMargin: 10
+                    });
+
+                }
+                //  console.log("Esle")
+            }
+        }, 300);
     },
 
     detectMobile: function () {
@@ -100,9 +57,13 @@ var idh = {
 
     },
 
-    setHeightOfSections: function () {
+    setHeightOfElements: function () {
         $('.home, .contact').height(idh.windowHeight);
         $('.home video').width(idh.windowWidth);
+        var map = $(".contact .map");
+        map.height(map.width());
+
+
     },
 
     changeMenuStyleOnScroll: function () {
@@ -110,10 +71,26 @@ var idh = {
             var home = $(".home"),
                 homeHeight = home.outerHeight(),
                 logo = home.find(".logo");
+
             var scroll = $(window).scrollTop();
-            scroll >= 1 ? logo.addClass("logoInner") : logo.removeClass("logoInner");
+            if (scroll >= 1) {
+                logo.addClass("logoInner");
+                home.find("nav").height(77);
+                home.find(".dropdown").css("top","77px");
+
+            } else {
+                logo.removeClass("logoInner");
+                home.find("nav").height(119);
+                home.find(".dropdown").css("top", "119px");
+
+
+            }
             var c = (homeHeight - window.scrollY) / homeHeight;
+
+
             c >= 0 && ($("nav").css("background-color", "rgba(51,51,51," + (1.1 - c) + ")"));
+
+
         }
     },
     _windowResize: function () {
@@ -121,9 +98,8 @@ var idh = {
 
         idh.windowHeight = $(window).height();
         idh.windowWidth = $(window).width();
-
-
-        idh.setHeightOfSections();
+        idh.setHeightOfElements();
+        animation.skrollr.refresh(animation.animate, animation.animate.find("div"), animation.animate.find("h1"));
     },
 
 
@@ -159,16 +135,39 @@ var idh = {
         }
     },
 
+    dropDownMenu: function () {
+        if(idh.isMobile || idh.windowWidth <767){
+            return
+        }
+
+        $(".home nav > ul > li").hover(function () {
+                var _this = $(this),
+                    dropdown = _this.find(".dropdown");
+
+                dropdown.stop().slideDown(350);
+                if (dropdown.length > 0) _this.addClass("active");
+
+            },
+            function () {
+                $(".dropdown").stop().slideUp(250);
+                $(".home nav > ul > li").removeClass("active");
+
+            }
+        )
+    },
+
+
     init: function () {
         idh.detectMobile();
-        // setTimeout(function () {
         idh.initBxSlider();
-        //  }, 100);
+        idh.initNiceScroll();
+        idh.setHeightOfElements();
+        setTimeout(function () {
+            idh.changeMenuStyleOnScroll();
+        }, 100);
+        idh.dropDownMenu();
 
 
-//        idh.initNiceScroll();
-        idh.setHeightOfSections();
-        idh.changeMenuStyleOnScroll();
         idh.addEventListners();
         idh.quotesAnimation();
     }

@@ -47,9 +47,11 @@ $(function () {
             menuBtn.addClass(menuBtnActiveClass)
         });
         //close menu when clicking site overlay
-        siteOverlay.add(pushy).click(function () {
-            togglePushy();
-            menuBtn.removeClass(menuBtnActiveClass)
+        siteOverlay.add(pushy.find("a")).click(function () {
+            if ($(window).width() < 767) {
+                togglePushy();
+                menuBtn.removeClass(menuBtnActiveClass)
+            }
 
         });
     } else {
@@ -76,7 +78,7 @@ $(function () {
         //close menu when clicking site overlay
         siteOverlay.add(pushy).click(function () {
             if (state) {
-               console.log(state);
+                console.log(state);
                 openPushyFallback();
                 state = false;
             } else {

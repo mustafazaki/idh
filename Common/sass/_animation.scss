@@ -9,7 +9,7 @@
     @include absolute(0, "", "", 0);
     overflow: hidden;
     @include widthHeight(100%, 600px);
-
+//    outline: 1px solid black;
   }
 
   div {

@@ -106,7 +106,7 @@ a, a:visited, a:hover, .Logo {
 /* -------------------------------------------- */
 .Wrapper {
   width: 100%;
-  height: 100%;
+  //  height: 100%;
   padding: 0;
   margin: 0;
 }
@@ -234,12 +234,11 @@ section.home {
 -------------------------------------------- */
 .home nav {
   display: block;
-  opacity: 0;
   position: fixed;
   left: 0;
   top: 0px;
   width: 100%;
-  min-height: 70px;
+  height: 77px;
   padding: 0;
   margin: 0;
   z-index: 6;
@@ -250,30 +249,67 @@ section.home {
   -o-transition: all 0.5s ease-in-out;
 }
 
-.home nav ul {
+.home nav > ul {
   float: right;
   padding: 0;
-  margin: 29px 0 0;
-
+  display: table;
+  height: 100%;
 }
 
-.home nav ul li {
-  float: left;
+.home nav > ul > li {
+  //  float: left;
   font: normal 13px 'proxima_nova_rgregular';
   color: #fff;
   text-transform: uppercase;
-  padding: 0;
-  margin: 0 50px 0 0;
+  position: relative;
+  padding: 0 25px;
+  height: 100%;
+  vertical-align: middle;
+
+  &.active {
+
+    background: #1A1A1A;
+  }
+
+  display: table-cell;
 }
 
-.home nav ul li a {
+.home nav > ul > li a {
   text-decoration: none;
   color: #fff;
 }
 
-.home nav ul li a:hover {
+.home nav > ul > li > a:hover {
   text-decoration: none;
   color: #CCC;
+}
+
+.home nav ul ul {
+
+  @include absolute(77px, "", "", 0);
+  background: #333;
+  min-width: 220px;
+  display: none;
+
+  li {
+    a {
+      font-size: 12px;
+      padding: 12px 20px;
+      display: block;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+
+    $colors-list: #1e80a2 #eb8e4a #84a927 #edc244;
+    @each $current-color in $colors-list {
+      $i: index($colors-list, $current-color);
+      &:nth-child(#{$i}) a:hover {
+        background-color: $current-color;
+      }
+    }
+  }
 }
 
 /*video
@@ -291,7 +327,6 @@ section.home {
 /*about
 -------------------------------------------- */
 .about {
-  height: 674px;
   background: #fff;
 }
 
@@ -896,7 +931,6 @@ section.contact {
   border-radius: 50%;
   width: 40%;
   height: auto;
-  padding-top: 40%;
   background: white;
   margin: 40px 70px 0 0;
   -webkit-box-shadow: 0px 0px 24px 0px rgba(50, 50, 50, 1);
@@ -904,7 +938,6 @@ section.contact {
   box-shadow: 0px 0px 24px 0px rgba(50, 50, 50, 1);
 
   img, iframe {
-    @include absolute(0, "", "", 0);
     @include widthHeight(100%, 100%);
 
   }
@@ -1034,7 +1067,7 @@ footer .socialNetwork {
 }
 
 footer .socialNetwork a {
-  float: right;
+  float: left;
   width: 64px;
   height: 63px;
   padding: 0;

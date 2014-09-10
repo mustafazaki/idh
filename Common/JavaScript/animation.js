@@ -8,15 +8,13 @@ var animation = {
 
 
     setAttrOfAnimateAndScene: function () {
-        animation.animate.css("height", (animation.animationEndKeyFrame+800) + "px");
+        animation.animate.css("height", (animation.animationEndKeyFrame+180) + "px");
         var height = animation.scene.height(),
-            top = (animation.windowHeight - height) / 2;
-//        console.log(top)
-
-//        animation.scene.attr("data-0", "position:relative;top:0px;");
-//        animation.scene.attr("data-600-top", "position:fixed;top:" + top + "px;");
-//        animation.scene.attr("data--" + (animation.animationEndKeyFrame - height) + "-top", "position:fixed;top:" + top + "px;");
-//        animation.scene.attr("data-bottom", "position:fixed;top:-" + (height + 1) + "px;");
+            top = (animation.windowHeight - height + $("#home nav").height()) / 2;
+        animation.scene.attr("data-0", "position:relative;top:0px;");
+        animation.scene.attr("data-top", "position:fixed;top:" + top + "px;");
+        animation.scene.attr("data--" + (animation.animationEndKeyFrame - height) + "-top", "position:fixed;top:" + top + "px;");
+        animation.scene.attr("data--" + animation.animationEndKeyFrame + "-top", "position:fixed;top:-" + (height + 1) + "px;");
 
     },
 
