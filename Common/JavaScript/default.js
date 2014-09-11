@@ -9,43 +9,49 @@ var idh = {
     quoteIndex: -1,
 
     initBxSlider: function (isResizing) {
-        if (isResizing != true) {
-            idh.eventSlider = $('.event-slider').bxSlider();
-            idh.clientSlider = $('.client-slider').bxSlider();
+
+        if (!idh.isMobile) {
+
+            idh.eventSlider = $('.event-slider').bxSlider({
+
+                slideWidth: 230,
+                minSlides: 4,
+                maxSlides: 4,
+                infiniteLoop: false,
+                slideMargin: 20
+
+            });
+            idh.clientSlider = $('.client-slider').bxSlider({
+
+                slideWidth: 230,
+                minSlides: 4,
+                maxSlides: 4,
+                infiniteLoop: false,
+                slideMargin: 20
+
+            });
 
         }
+        else {
+            idh.eventSlider = $('.event-slider').bxSlider({
 
+                slideWidth: 230,
+                minSlides: 2,
+                maxSlides: 2,
+                infiniteLoop: false,
+                slideMargin: 10
 
-        var sliders = [idh.eventSlider, idh.clientSlider];
-        setTimeout(function () {
+            });
+            idh.clientSlider = $('.client-slider').bxSlider({
 
+                slideWidth: 230,
+                minSlides: 2,
+                maxSlides: 2,
+                infiniteLoop: false,
+                slideMargin: 10
 
-            if (!idh.isMobile) {
-                for (var i = 0; i < sliders.length; i++) {
-                    sliders[i].reloadSlider({
-                        slideWidth: 230,
-                        minSlides: 4,
-                        maxSlides: 4,
-                        infiniteLoop: false,
-                        slideMargin: 20
-                    });
-                }
-
-            }
-            else {
-                for (var i = 0; i < sliders.length; i++) {
-                    sliders[i].reloadSlider({
-                        slideWidth: 230,
-                        minSlides: 2,
-                        maxSlides: 2,
-                        infiniteLoop: false,
-                        slideMargin: 10
-                    });
-
-                }
-                //  console.log("Esle")
-            }
-        }, 300);
+            });
+        }
     },
 
     detectMobile: function () {
