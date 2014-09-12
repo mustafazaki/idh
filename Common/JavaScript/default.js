@@ -3,8 +3,8 @@ var idh = {
     windowHeight: $(window).height(),
     windowWidth: $(window).width(),
     isMobile: false,
-    eventSlider: null,
-    clientSlider: null,
+
+    bxSlider: null,
     resizeTimeoutID: null,
     quoteIndex: -1,
 
@@ -12,7 +12,7 @@ var idh = {
 
         if (!idh.isMobile) {
 
-            idh.eventSlider = $('.event-slider').bxSlider({
+            idh.bxSlider = $('.slider1').bxSlider({
 
                 slideWidth: 230,
                 minSlides: 4,
@@ -21,28 +21,12 @@ var idh = {
                 slideMargin: 20
 
             });
-            idh.clientSlider = $('.client-slider').bxSlider({
 
-                slideWidth: 230,
-                minSlides: 4,
-                maxSlides: 4,
-                infiniteLoop: false,
-                slideMargin: 20
-
-            });
 
         }
         else {
-            idh.eventSlider = $('.event-slider').bxSlider({
 
-                slideWidth: 230,
-                minSlides: 2,
-                maxSlides: 2,
-                infiniteLoop: false,
-                slideMargin: 10
-
-            });
-            idh.clientSlider = $('.client-slider').bxSlider({
+            idh.bxSlider = $('.slider1').bxSlider({
 
                 slideWidth: 230,
                 minSlides: 2,
