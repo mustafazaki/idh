@@ -206,7 +206,7 @@ section.home {
 
 /*Logo
 -------------------------------------------- */
-.home .logo {
+.logo {
   float: left;
   width: 137px;
   height: 90px;
@@ -219,7 +219,7 @@ section.home {
 
 }
 
-.home .logoInner {
+.logoInner {
   width: 87px;
   height: 50px;
   background: url(../Images/Logo/logo.png) no-repeat 0 0;
@@ -232,7 +232,7 @@ section.home {
 
 /*nav
 -------------------------------------------- */
-.home nav {
+nav {
   display: block;
   position: fixed;
   left: 0;
@@ -249,14 +249,14 @@ section.home {
   -o-transition: all 0.5s ease-in-out;
 }
 
-.home nav > ul {
+nav > ul {
   float: right;
   padding: 0;
   display: table;
   height: 100%;
 }
 
-.home nav > ul > li {
+nav > ul > li {
   //  float: left;
   font: normal 13px 'proxima_nova_rgregular';
   color: #fff;
@@ -274,17 +274,17 @@ section.home {
   display: table-cell;
 }
 
-.home nav > ul > li a {
+nav > ul > li a {
   text-decoration: none;
   color: #fff;
 }
 
-.home nav > ul > li > a:hover {
+nav > ul > li > a:hover {
   text-decoration: none;
   color: #CCC;
 }
 
-.home nav ul ul {
+nav ul ul {
 
   @include absolute(77px, "", "", 0);
   background: #333;
@@ -451,12 +451,12 @@ section.home {
 
 /*about Services
 -------------------------------------------- */
-#services {
+.services-intro {
   background: url(../Images/Backgrounds/ourclientBg.jpg) no-repeat center 0;
   background-size: cover;
 }
 
-#services h2 {
+.services-intro p {
   position: relative;
   z-index: 5;
   display: block;
@@ -467,6 +467,7 @@ section.home {
   padding: 138px 0;
   margin: 0 auto 0;
 }
+
 
 /*about Services
 -------------------------------------------- */
