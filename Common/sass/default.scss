@@ -206,110 +206,128 @@ section.home {
 
 /*Logo
 -------------------------------------------- */
-.logo {
-  float: left;
-  width: 137px;
-  height: 90px;
-  background: url(../Images/Logo/logoTop.png) no-repeat 0 0;
-  margin: 17px 0 12px 26px;
-  transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-
-}
-
-.logoInner {
-  width: 87px;
-  height: 50px;
-  background: url(../Images/Logo/logo.png) no-repeat 0 0;
-  margin: 17px 0 10px 26px;
-  transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-}
-
-/*nav
--------------------------------------------- */
-nav {
-  display: block;
+header {
   position: fixed;
+
   left: 0;
   top: 0px;
   width: 100%;
-  height: 77px;
-  padding: 0;
-  margin: 0;
   z-index: 6;
-  background: #333333;
+
+  height: 77px;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
-}
 
-nav > ul {
-  float: right;
-  padding: 0;
-  display: table;
-  height: 100%;
-}
+  .logo a {
+    float: left;
+    width: 137px;
+    height: 90px;
+    background: url(../Images/Logo/logoTop.png) no-repeat 0 0;
+    margin: 17px 0 12px 26px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
 
-nav > ul > li {
-  //  float: left;
-  font: normal 13px 'proxima_nova_rgregular';
-  color: #fff;
-  text-transform: uppercase;
-  position: relative;
-  padding: 0 25px;
-  height: 100%;
-  vertical-align: middle;
-
-  &.active {
-
-    background: #1A1A1A;
   }
 
-  display: table-cell;
-}
+  .logoInner a {
+    width: 87px;
+    height: 50px;
+    background: url(../Images/Logo/logo.png) no-repeat 0 0;
+    margin: 17px 0 10px 26px;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+  }
 
-nav > ul > li a {
-  text-decoration: none;
-  color: #fff;
-}
 
-nav > ul > li > a:hover {
-  text-decoration: none;
-  color: #CCC;
-}
+  /*nav
+  -------------------------------------------- */
+  nav {
+    display: block;
 
-nav ul ul {
+    height: 100%;
 
-  @include absolute(77px, "", "", 0);
-  background: #333;
-  min-width: 220px;
-  display: none;
+    background: #333333;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+  }
 
-  li {
-    a {
-      font-size: 12px;
-      padding: 12px 20px;
-      display: block;
-      -webkit-transition: all .2s ease-in-out;
-      -moz-transition: all .2s ease-in-out;
-      -o-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out;
+  nav > ul {
+    float: right;
+    padding: 0;
+    display: table;
+    height: 100%;
+  }
+
+  nav > ul > li {
+    //  float: left;
+    font: normal 13px 'proxima_nova_rgregular';
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 25px;
+    height: 100%;
+    vertical-align: middle;
+
+    &.active {
+
+      background: #1A1A1A;
     }
 
-    $colors-list: #1e80a2 #eb8e4a #84a927 #edc244;
-    @each $current-color in $colors-list {
-      $i: index($colors-list, $current-color);
-      &:nth-child(#{$i}) a:hover {
-        background-color: $current-color;
+    display: table-cell;
+  }
+
+  nav > ul > li a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  nav > ul > li > a:hover {
+    text-decoration: none;
+    color: #CCC;
+  }
+
+  nav ul ul {
+
+    @include absolute(77px, "", "", 0);
+    background: #333;
+    min-width: 220px;
+    display: none;
+
+    li {
+      a {
+        font-size: 12px;
+        padding: 12px 20px;
+        display: block;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+      }
+
+      $colors-list: #1e80a2 #eb8e4a #84a927 #edc244;
+      @each $current-color in $colors-list {
+        $i: index($colors-list, $current-color);
+        &:nth-child(#{$i}) a:hover {
+          background-color: $current-color;
+        }
       }
     }
   }
+}
+
+.logged-in {
+  header{
+    top: 32px;
+  }
+
 }
 
 /*video
@@ -467,7 +485,6 @@ nav ul ul {
   padding: 138px 0;
   margin: 0 auto 0;
 }
-
 
 /*about Services
 -------------------------------------------- */
@@ -957,16 +974,31 @@ section.contact {
   -webkit-box-shadow: 0px 0px 24px 0px rgba(50, 50, 50, 1);
   -moz-box-shadow: 0px 0px 24px 0px rgba(50, 50, 50, 1);
   box-shadow: 0px 0px 24px 0px rgba(50, 50, 50, 1);
+
+  div.wpcf7-response-output, span.wpcf7-not-valid-tip {
+    float: left;
+    border: none;
+    color: #fff;
+    font: normal 16px 'source_sans_proregular';
+    margin-top: 10px;
+  }
+  span.wpcf7-not-valid-tip {
+    margin-top: -20px;
+    color: red;
+    margin-bottom: 10px;
+    width: 100%;
+  }
 }
 
-.contact .form fieldset {
+.contact .form form {
   display: block;
   width: 90%;
-
   padding: 5%;
+  float: left;
+  @include placeholderColor(#fff);
 }
 
-.contact .form fieldset input, .contact .form fieldset textarea {
+.contact .form input, .contact .form textarea {
   float: left;
   font: normal 22px 'source_sans_proregular';
   color: #fff;
@@ -981,18 +1013,24 @@ section.contact {
   border-radius: 5px;
 }
 
-.contact .form fieldset input + input {
+.contact .form form p {
+  float: left;
+  width: 100%;
+
+}
+
+.contact .form form p + p input {
   background: rgba(192, 192, 192, 0.6) url(../Images/Buttons/emailBg.png) no-repeat 20px 25px;
 }
 
-.contact .form fieldset textarea {
+.contact .form textarea {
   height: 136px;
   background: rgba(192, 192, 192, 0.6) url(../Images/Buttons/messageBg.png) no-repeat 20px 21px;
   margin: 0 0 25px 0;
   resize: none;
 }
 
-.contact .form fieldset input[type=submit] {
+.contact .form input[type=submit] {
   float: right;
   width: 170px;
   height: 57px;
@@ -1012,7 +1050,7 @@ section.contact {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a0860', endColorstr='#88409a', GradientType=0); /* IE6-8 */
 }
 
-.contact .form fieldset input[type=submit]:hover {
+.contact .form input[type=submit]:hover {
   background: #88409a; /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzg4NDA5YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0YTA4NjAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -1024,24 +1062,6 @@ section.contact {
   background: linear-gradient(to bottom, #88409a 0%, #4a0860 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88409a', endColorstr='#4a0860', GradientType=0); /* IE6-8 */
 
-}
-
-.contact .form fieldset ::-webkit-input-placeholder {
-  color: #fff;
-}
-
-.contact .form fieldset :-moz-placeholder {
-  /* Firefox 18- */
-  color: #fff;
-}
-
-.contact .form fieldset ::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #fff;
-}
-
-.contact .form fieldset :-ms-input-placeholder {
-  color: #fff;
 }
 
 /*Footer

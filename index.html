@@ -15,32 +15,38 @@
 <body>
 <!--Wrapper -->
 <div class="Wrapper">
-<div id="debug" style="display: none;position: fixed;right: 0;top: 0;background: green;z-index:9999;color: #fff;font-size: 20px;"></div>
+<div id="debug"
+     style="display: none;position: fixed;right: 0;top: 0;background: green;z-index:9999;color: #fff;font-size: 20px;"></div>
 <!-- Home -->
-<nav>
-    <a href="#home" class="logo scroll"></a>
-    <ul>
-        <li><a href="#about" class="scroll">About us</a></li>
-        <li><a href="javascript:void(0)" class="scroll">Portfolio</a></li>
-        <li><a href="#services" class="scroll">Services</a>
+<header>
 
-            <ul class="dropdown">
-                <li><a href="#">Exhibitions & Kiosks</a></li>
-                <li><a href="#">Modeling & Rendering</a></li>
-                <li><a href="#">Graphic Design & Branding</a></li>
-                <li><a href="#">Conference & Event Design</a></li>
-            </ul>
-        </li>
-        <li><a href="javascript:void(0)">Enquiry</a></li>
-        <li><a href="#contact" class="scroll">Contact Us</a></li>
-    </ul>
-</nav>
+    <div class="logo">
+    <a href="#home" class="logo scroll"></a>
+    </div>
+    <nav>
+
+        <ul>
+            <li><a href="#about" class="scroll">About us</a></li>
+            <li><a href="javascript:void(0)" class="scroll">Portfolio</a></li>
+            <li><a href="#services" class="scroll">Services</a>
+
+                <ul class="dropdown">
+                    <li><a href="#">Exhibitions & Kiosks</a></li>
+                    <li><a href="#">Modeling & Rendering</a></li>
+                    <li><a href="#">Graphic Design & Branding</a></li>
+                    <li><a href="#">Conference & Event Design</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0)">Enquiry</a></li>
+            <li><a href="#contact" class="scroll">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
 <section id="home" class="home">
     <!-- Navigation -->
     <div class="mobile-header mobile">
         <a href="#" class="bt-menu-trigger"><span>Menu</span></a>
     </div>
-
 
 
     <div class="site-overlay"></div>
@@ -115,7 +121,7 @@
 <section class="animation" id="animation" data-emit-events>
     <div class="scene" id="scene" data-anchor-target="#animation">
 
-    <h1 class="process" data-anchor-target="#scene"
+        <h1 class="process" data-anchor-target="#scene"
             data--100-bottom="transform:scale(0);opacity:1"
             data--300-bottom="transform:scale(1);opacity:1"
             data--400-bottom="transform:scale(10);opacity:0"
@@ -223,12 +229,13 @@
             <textarea resize="false" placeholder="Please enter your message"></textarea>
             <input type="submit" name="Send" value="Send">
         </fieldset>
+
     </div>
 
     <!-- Map -->
     <div class="map">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28911.30699021496!2d55.146657100000006!3d25.07092505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sInspired+Design+House%2C+Jumeirah+Lakes+Towers%2C+Dubai!5e0!3m2!1sen!2s!4v1409739772982"
-                   width="485" height="485" frameborder="0" style="border:0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28911.30699021496!2d55.146657100000006!3d25.07092505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sInspired+Design+House%2C+Jumeirah+Lakes+Towers%2C+Dubai!5e0!3m2!1sen!2s!4v1409739772982"
+                width="485" height="485" frameborder="0" style="border:0"></iframe>
 
     </div>
 </section>
@@ -244,7 +251,6 @@
         <a href="javascript:void(0)" class="pint"></a>
         <a href="javascript:void(0)" class="twitter"></a>
     </div>
-
 
 
 </footer>

@@ -48,8 +48,8 @@ var idh = {
     },
 
     setHeightOfElements: function () {
-        $('.home, .contact').height(idh.windowHeight);
-        $('.home video').width(idh.windowWidth);
+        $('.home, .contact,.home video').height(idh.windowHeight);
+        //$('.home video').width(idh.windowWidth);
         var map = $(".contact .map");
         map.height(map.width());
 
@@ -60,18 +60,18 @@ var idh = {
         if (!idh.isMobile) {
             var home = $(".home"),
                 homeHeight = home.outerHeight(),
-                logo = home.find(".logo");
+                logo = $("header .logo");
 
             var scroll = $(window).scrollTop();
             if (scroll >= 1) {
                 logo.addClass("logoInner");
-                home.find("nav").height(77);
-                home.find(".dropdown").css("top","77px");
+                $("header").find("nav").height(77);
+                $("header").find(".dropdown").css("top","77px");
 
             } else {
                 logo.removeClass("logoInner");
-                home.find("nav").height(119);
-                home.find(".dropdown").css("top", "119px");
+                $("header").find("nav").height(119);
+                $("header").find(".dropdown").css("top", "119px");
 
 
             }
