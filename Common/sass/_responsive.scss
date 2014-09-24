@@ -7,10 +7,14 @@
 
 @media only screen and (max-width: 767px) {
 
-  .home .logo {
+  .logo {
     float: none;
     margin: 10px auto;
     display: block;
+  }
+
+  video {
+    display: none;
   }
 
   .about {
@@ -30,7 +34,7 @@
       li {
         width: 100%;
         margin: 10px 0;
-        &:last-child{
+        &:last-child {
           padding-bottom: 20px;
         }
       }
@@ -38,12 +42,13 @@
     }
   }
 
-  #services-intro {
-    h2 {
+  .services-intro {
+    p {
       font-size: 30px;
       padding: 20px 0;
       width: 90%;
     }
+
   }
   .animation {
     display: none;
@@ -99,17 +104,18 @@
       width: 90%;
       margin: 0 0 40px 5%;
 
-      fieldset input:not([type=submit]), fieldset textarea {
+       input:not([type=submit]),  textarea {
         font-size: 14px;
         padding: 8px 2% 8px 4%;
         width: 96%;
         background-image: none !important;
       }
-      fieldset input[type=submit] {
+       input[type=submit] {
         width: 100%;
         font-size: 16px;
         height: 40px;
       }
+
 
     }
 
@@ -164,6 +170,14 @@
   }
   .mobile {
     display: block;
+  }
+  html.js{
+    margin-top: 0 !important;
+
+  }
+  #wpadminbar{
+    display: none;
+
   }
 
 }

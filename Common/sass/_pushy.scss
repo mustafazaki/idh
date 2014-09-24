@@ -34,55 +34,59 @@ body.pushy-active {
 }
 
 @media only screen and (max-width: 767px) {
-  #home {
+  header {
+
+    position: fixed;
+    width: 210px;
+    left: 0;
+    height: 100% !important;
+    top: 0;
+    z-index: 9999;
+    background: #000000 !important;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+    -webkit-transform: translate3d(-210px, 0, 0);
+    -moz-transform: translate3d(-210px, 0, 0);
+    -ms-transform: translate3d(-210px, 0, 0);
+    -o-transform: translate3d(-210px, 0, 0);
+    transform: translate3d(-210px, 0, 0);
+    margin-top: 0;
 
     nav {
-      position: fixed;
-      width: 210px;
-      left: 0;
-      height: 100% !important;
-      top: 0;
-      z-index: 9999;
-      background: #000000 !important;
-      overflow: auto;
-      -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
-      -webkit-transform: translate3d(-210px, 0, 0);
-      -moz-transform: translate3d(-210px, 0, 0);
-      -ms-transform: translate3d(-210px, 0, 0);
-      -o-transform: translate3d(-210px, 0, 0);
-      transform: translate3d(-210px, 0, 0);
-      margin-top: 0;
-
-      ul {
-        height: auto;
-        display: block;
-        margin-top: 20px;
-      }
-
-      li {
-        float: left;
-        padding: 0;
-        width: 100%;
-        margin: 0;
-        &:last-child a {
-          border-bottom: none;
-        }
-
-        a {
-          width: 90%;
-          margin: 0;
-          padding: 10px 0 10px 10%;
-          border-bottom: 1px solid #636363;
-          display: block;
-          &:hover {
-
-            //   border-bottom: 1px solid $white;
-          }
-
-        }
-      }
+      height: auto;
     }
 
+    ul {
+      height: auto;
+      display: block;
+      margin-top: 20px;
+    }
+
+    li {
+      float: left;
+      padding: 0;
+      width: 100%;
+      margin: 0;
+      &:last-child a {
+        border-bottom: none;
+      }
+
+      a {
+        width: 90%;
+        margin: 0;
+        padding: 10px 0 10px 10%;
+        border-bottom: 1px solid #636363;
+        display: block;
+        &:hover {
+
+          //   border-bottom: 1px solid $white;
+        }
+
+      }
+    }
+  }
+  header
+  {
     nav > ul {
       > li:first-child a.active {
         border-bottom: 0;
@@ -91,20 +95,38 @@ body.pushy-active {
           left: 0;
         }
       }
+      > li {
+        padding: 0 10px;
+
+
+      }
       ul {
         display: block;
         position: static;
         width: 98%;
         padding: 0;
         margin-top: 0 !important;
-        margin-left: 2%;
+        margin-left: 0;
         min-width: 0;
         float: left;
+        li{
+          $colors-list: #1e80a2 #eb8e4a #84a927 #edc244;
+          @each $current-color in $colors-list {
+            $i: index($colors-list, $current-color);
+            &:nth-child(#{$i}) a {
+              background-color: $current-color;
+
+            }
+          }
+        }
         a {
           border-bottom: none;
         }
+
       }
 
     }
   }
+
+
 }

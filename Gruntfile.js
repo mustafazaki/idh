@@ -16,8 +16,8 @@ module.exports = function (grunt) {
             },
             copy: {
                 main: {
-                    src: 'Common/JavaScript/*.js',
-                    dest: 'C:/wamp/www/wordpress/wp-content/themes/cake/js/'
+                    src: 'Common/sass/default.css',
+                    dest: 'C:/wamp/www/wordpress/wp-content/themes/cake/'
                 }
             }
 

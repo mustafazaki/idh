@@ -2,13 +2,18 @@
 @import "functions";
 
 .bt-menu-trigger {
-  position: fixed;
 
-  top: 5px;
-  left: 8px;
+  position: absolute;
+
+
+
+  top: -1px;
+  left: 10px;
+
+
   z-index: 6;
   display: block;
-  width: 40px;
+  width: 30px;
   height: 50px;
   cursor: pointer;
 }

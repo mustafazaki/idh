@@ -494,6 +494,9 @@ header {
   min-height: 320px;
   border-top: 3px #000 solid;
   background: #f5f3f3;
+  float: left;
+
+
 
   .client {
     width: 90%;
@@ -527,6 +530,9 @@ header {
 
 .ourClient .bx-wrapper img {
   @include verticalCenter();
+  width: auto !important;
+  height: auto !important;
+
 
 }
 
@@ -748,6 +754,9 @@ header {
 
 .event .bx-wrapper img {
   @include verticalCenter();
+  width: auto !important;
+  height: auto !important;
+
 }
 
 /** THEME
@@ -960,6 +969,7 @@ section.contact {
   img, iframe {
     @include widthHeight(100%, 100%);
 
+
   }
 }
 
@@ -1123,8 +1133,8 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
 }
 
 .mobile-header {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background: #333;
   position: fixed;
   z-index: 10;

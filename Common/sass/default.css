@@ -393,7 +393,8 @@ header {
   width: 100%;
   min-height: 320px;
   border-top: 3px #000 solid;
-  background: #f5f3f3; }
+  background: #f5f3f3;
+  float: left; }
   .ourClient .client {
     width: 90%;
     margin: 0 auto; }
@@ -429,7 +430,9 @@ header {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  width: auto !important;
+  height: auto !important; }
 
 /** THEME
 ===================================*/
@@ -620,7 +623,9 @@ header {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  width: auto !important;
+  height: auto !important; }
 
 /** THEME
 ===================================*/
@@ -888,7 +893,7 @@ section.contact {
   /* Opera 11.10+ */
   background: -ms-linear-gradient(top, #4a0860 0%, #88409a 100%);
   /* IE10+ */
-  background: linear, to bottom, #4a0860 0%, #88409a 100%;
+  background: linear-gradient(to bottom, #4a0860 0%, #88409a 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a0860', endColorstr='#88409a', GradientType=0);
   /* IE6-8 */ }
@@ -908,7 +913,7 @@ section.contact {
   /* Opera 11.10+ */
   background: -ms-linear-gradient(top, #88409a 0%, #4a0860 100%);
   /* IE10+ */
-  background: linear, to bottom, #88409a 0%, #4a0860 100%;
+  background: linear-gradient(to bottom, #88409a 0%, #4a0860 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88409a', endColorstr='#4a0860', GradientType=0);
   /* IE6-8 */ }
@@ -958,8 +963,8 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
   opacity: 0.6; }
 
 .mobile-header {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background: #333;
   position: fixed;
   z-index: 10; }
@@ -1091,12 +1096,12 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
     background: url(../Images/image-ipad-13.jpg) no-repeat 0 0; }
 
 .bt-menu-trigger {
-  position: fixed;
-  top: 5px;
-  left: 8px;
+  position: absolute;
+  top: -1px;
+  left: 10px;
   z-index: 6;
   display: block;
-  width: 40px;
+  width: 30px;
   height: 50px;
   cursor: pointer; }
 
@@ -1182,7 +1187,7 @@ body.pushy-active {
   transform: translate3d(200px, 0, 0); }
 
 @media only screen and (max-width: 767px) {
-  #home nav {
+  header {
     position: fixed;
     width: 210px;
     left: 0;
@@ -1199,44 +1204,60 @@ body.pushy-active {
     -o-transform: translate3d(-210px, 0, 0);
     transform: translate3d(-210px, 0, 0);
     margin-top: 0; }
-    #home nav ul {
+    header nav {
+      height: auto; }
+    header ul {
       height: auto;
       display: block;
       margin-top: 20px; }
-    #home nav li {
+    header li {
       float: left;
       padding: 0;
       width: 100%;
       margin: 0; }
-      #home nav li:last-child a {
+      header li:last-child a {
         border-bottom: none; }
-      #home nav li a {
+      header li a {
         width: 90%;
         margin: 0;
         padding: 10px 0 10px 10%;
         border-bottom: 1px solid #636363;
         display: block; }
-  #home nav > ul > li:first-child a.active {
+
+  header nav > ul > li:first-child a.active {
     border-bottom: 0; }
-    #home nav > ul > li:first-child a.active:after {
+    header nav > ul > li:first-child a.active:after {
       width: 100%;
       left: 0; }
-  #home nav > ul ul {
+  header nav > ul > li {
+    padding: 0 10px; }
+  header nav > ul ul {
     display: block;
     position: static;
     width: 98%;
     padding: 0;
     margin-top: 0 !important;
-    margin-left: 2%;
+    margin-left: 0;
     min-width: 0;
     float: left; }
-    #home nav > ul ul a {
+    header nav > ul ul li:nth-child(1) a {
+      background-color: #1e80a2; }
+    header nav > ul ul li:nth-child(2) a {
+      background-color: #eb8e4a; }
+    header nav > ul ul li:nth-child(3) a {
+      background-color: #84a927; }
+    header nav > ul ul li:nth-child(4) a {
+      background-color: #edc244; }
+    header nav > ul ul a {
       border-bottom: none; } }
 @media only screen and (max-width: 767px) {
-  .home .logo {
+  .logo {
     float: none;
     margin: 10px auto;
     display: block; }
+
+  video {
+    display: none; }
 
   .about {
     height: auto; }
@@ -1254,7 +1275,7 @@ body.pushy-active {
         .about .services ul li:last-child {
           padding-bottom: 20px; }
 
-  #services-intro h2 {
+  .services-intro p {
     font-size: 30px;
     padding: 20px 0;
     width: 90%; }
@@ -1298,12 +1319,12 @@ body.pushy-active {
     .contact .form {
       width: 90%;
       margin: 0 0 40px 5%; }
-      .contact .form fieldset input:not([type=submit]), .contact .form fieldset textarea {
+      .contact .form input:not([type=submit]), .contact .form textarea {
         font-size: 14px;
         padding: 8px 2% 8px 4%;
         width: 96%;
         background-image: none !important; }
-      .contact .form fieldset input[type=submit] {
+      .contact .form input[type=submit] {
         width: 100%;
         font-size: 16px;
         height: 40px; }
@@ -1354,6 +1375,12 @@ body.pushy-active {
     display: none !important; }
 
   .mobile {
-    display: block; } }
+    display: block; }
+
+  html.js {
+    margin-top: 0 !important; }
+
+  #wpadminbar {
+    display: none; } }
 
 /*# sourceMappingURL=default.css.map */
