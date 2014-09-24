@@ -605,7 +605,7 @@ header {
 -------------------------------------------- */
 .event .bx-wrapper {
   position: relative;
-  margin: 696px auto 0;
+  margin: 728px auto 0;
   width: 700px;
   padding: 0;
   *zoom: 1; }
@@ -888,7 +888,7 @@ section.contact {
   /* Opera 11.10+ */
   background: -ms-linear-gradient(top, #4a0860 0%, #88409a 100%);
   /* IE10+ */
-  background: linear-gradient(to bottom, #4a0860 0%, #88409a 100%);
+  background: linear, to bottom, #4a0860 0%, #88409a 100%;
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a0860', endColorstr='#88409a', GradientType=0);
   /* IE6-8 */ }
@@ -908,7 +908,7 @@ section.contact {
   /* Opera 11.10+ */
   background: -ms-linear-gradient(top, #88409a 0%, #4a0860 100%);
   /* IE10+ */
-  background: linear-gradient(to bottom, #88409a 0%, #4a0860 100%);
+  background: linear, to bottom, #88409a 0%, #4a0860 100%;
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#88409a', endColorstr='#4a0860', GradientType=0);
   /* IE6-8 */ }
@@ -922,13 +922,14 @@ footer {
   padding: 0;
   margin: 0; }
 
-footer p {
+footer .footer_copy p {
   float: left;
   font: normal 18px 'source_sans_proregular';
   color: #5e5f5c;
   width: 48%;
   padding: 0;
-  margin: 109px 0 0 20px; }
+  margin: 109px 0 0 20px;
+  text-align: left; }
 
 footer .socialNetwork {
   float: right;

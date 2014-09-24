@@ -19,6 +19,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   line-height: 1;
 
+
 }
 
 ol, ul {
@@ -739,7 +740,7 @@ header {
 -------------------------------------------- */
 .event .bx-wrapper {
   position: relative;
-  margin: 696px auto 0;
+  margin: 728px auto 0;
   width: 700px;
   padding: 0;
   *zoom: 1;
@@ -1074,13 +1075,15 @@ footer {
   margin: 0;
 }
 
-footer p {
+footer .footer_copy p {
   float: left;
   font: normal 18px 'source_sans_proregular';
   color: #5e5f5c;
   width: 48%;
   padding: 0;
   margin: 109px 0 0 20px;
+  text-align: left;
+
 }
 
 footer .socialNetwork {
