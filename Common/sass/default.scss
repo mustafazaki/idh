@@ -123,13 +123,19 @@ section {
 -------------------------------------------- */
 section.home {
   height: 636px;
-  background-size: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   &:after {
     background: url(../Images/bar.png) 0 bottom /100% auto no-repeat;
     @include content(100%, 7px, "", "", 0, 0);
     z-index: 1;
 
   }
+}
+
+.no-bg .home {
+  background-size: 0;
 }
 
 .section {
@@ -350,9 +356,9 @@ header nav ul ul li:nth-child(4) a:hover {
   height: auto;
   position: absolute;
   left: 0;
-  top: -175px;
-
+  top: 0;
   z-index: 1;
+
 }
 
 /*about
@@ -1379,6 +1385,7 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
   background-size: contain;
   width: 583px;
   height: 486px;
+  z-index: 2;
 
 }
 
@@ -1404,47 +1411,52 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
   }
 
   .pencil {
-    background: url(../Images/pencils.jpg) 0 0;
-    width: 532px;
-    height: 253px;
+    background: url(../Images/pencils.png) 0 0;
+    width: 739px;
+    height: 391px;
     position: absolute;
     left: 0;
     bottom: 0;
+    z-index: 1;
 
   }
 }
 
 .animation .sketch-h1 {
   position: absolute;
-  left: 10%;
-  top: 40%;
+  left: 14%;
+  top: 160px;
+  background: url(../Images/sketch-h1.png) 0 0 no-repeat;
   margin: -40px 0 0 0;
   font: bold 100% $avalon;
   color: #00aec5;
   text-transform: lowercase;
+  width: 269px;
+  height: 50px;
+  text-indent: -9999px;
 
 }
 
 .animation .render {
-  color: #c42501;
+  color: #f16378;
   position: absolute;
-  left: 10%;
+  left: 4%;
   top: 145px;
   margin: -40px 0 0 0;
   font: bold 100% $avalon;
-  text-transform: lowercase;
+  text-transform: uppercase;
   z-index: 6;
 }
 
 .animation .model-h1 {
   position: absolute;
   right: 100px;
-  top: 145px;
+  top: 105px;
   z-index: 6;
   font: bold 100% $avalon;
-  color: #f16378;
+  color: #a14176;
   margin-top: -40px;
-  text-transform: lowercase;
+  text-transform: uppercase;
 
 }
 
@@ -1477,6 +1489,18 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
   width: 765px;
   height: 555px;
   overflow: hidden;
+  z-index: 8;
+
+}
+
+.animation .sketch-bg{
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background:  url(../Images/sketch-bg.jpg) 0 0 no-repeat;
+  background-size: cover;
+
 }
 
 /*.animation .ipad:after {
@@ -1501,7 +1525,7 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
   z-index: 5;
 }*/
 
-.animation .ipad-image {
+ .animation .ipad-image {
   position: absolute;
   left: 205px;
   top: 55px;
@@ -2473,6 +2497,21 @@ html {
   }
 }
 
+.clients-listing {
+  position: relative;
+  z-index: 8;
+
+}
+
+@media only screen and (max-width: 1400px) {
+  .home video.topVideo {
+
+    top: -175px;
+
+  }
+
+}
+
 @media only screen and (max-width: 1170px) {
   footer {
     height: auto;
@@ -2597,9 +2636,8 @@ html {
     }
 
   }
-  section.home {
+  .no-bg .home {
     background-size: auto;
-
   }
 
   header {

@@ -34,7 +34,7 @@ var animation = {
 
     setAttrOfIpadImage: function () {
         var increment = 100,
-            startingKeyFrame = 4000,
+            startingKeyFrame = 4600,
             ipadImg = $(".ipad-image"),
             delay = 0.1;
         for (var i = 0; i < 13; i++) {
