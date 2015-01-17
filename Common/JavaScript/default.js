@@ -388,8 +388,8 @@ var idh = {
         idh.dropDownMenu();
         idh.addEventListners();
         idh.quotesAnimation();
-     //   idh.initIsotopes();
-      // idh.isotopeFilter();
+       // idh.initIsotopes();
+        //idh.isotopeFilter();
         idh.toggleSizes();
         idh.innerVideoPlatPause();
         idh.accordion(".accordion h5", ".accordion .answer", 500);

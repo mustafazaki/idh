@@ -96,7 +96,8 @@ section {
 -------------------------------------------- */
 section.home {
   height: 636px;
-  background-size: 0px; }
+  background-repeat: no-repeat;
+  background-size: cover; }
   section.home:after {
     background: url(../Images/bar.png) 0 bottom/100% auto no-repeat;
     content: "";
@@ -106,6 +107,9 @@ section.home {
     left: 0;
     bottom: 0;
     z-index: 1; }
+
+.no-bg .home {
+  background-size: 0; }
 
 .section {
   float: left;
@@ -292,7 +296,7 @@ header nav ul ul li:nth-child(4) a:hover {
   height: auto;
   position: absolute;
   left: 0;
-  top: -175px;
+  top: 0;
   z-index: 1; }
 
 /*about
@@ -1177,31 +1181,81 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
   height: 328px;
   position: absolute;
   bottom: 60px;
-  right: 5%; }
+  right: 5%;
+  z-index: 5; }
 
 .animation .design {
-  background: url("../Images/design.png"); }
+  background: url("../Images/design.png");
+  bottom: 137px; }
 
-.animation .sketch-h1, .animation .render {
+.animation .board {
+  opacity: 0;
   position: absolute;
-  left: 10%;
-  top: 50%;
+  bottom: 0;
+  right: 2.3%;
+  background: url("../Images/board.png");
+  background-size: contain;
+  width: 583px;
+  height: 486px;
+  z-index: 2; }
+
+.animation .mac-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../Images/mac-bg.jpg);
+  background-size: 100% 100%;
+  opacity: 0; }
+.animation .mac {
+  position: absolute;
+  background: url(../Images/mac.png);
+  background-size: 100% 100%;
+  width: 679px;
+  height: 508px;
+  right: 0;
+  bottom: 0;
+  opacity: 0; }
+.animation .pencil {
+  background: url(../Images/pencils.png) 0 0;
+  width: 739px;
+  height: 391px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1; }
+
+.animation .sketch-h1 {
+  position: absolute;
+  left: 14%;
+  top: 160px;
+  background: url(../Images/sketch-h1.png) 0 0 no-repeat;
   margin: -40px 0 0 0;
   font: bold 100% "AvalonPlain";
-  color: #7373a9;
-  text-transform: lowercase; }
+  color: #00aec5;
+  text-transform: lowercase;
+  width: 269px;
+  height: 50px;
+  text-indent: -9999px; }
+
+.animation .render {
+  color: #f16378;
+  position: absolute;
+  left: 4%;
+  top: 145px;
+  margin: -40px 0 0 0;
+  font: bold 100% "AvalonPlain";
+  text-transform: uppercase;
+  z-index: 6; }
 
 .animation .model-h1 {
   position: absolute;
-  top: 300px;
   right: 100px;
+  top: 105px;
+  z-index: 6;
   font: bold 100% "AvalonPlain";
-  color: #483a80;
+  color: #a14176;
   margin-top: -40px;
-  text-transform: lowercase; }
-
-.animation .render {
-  color: #c42501; }
+  text-transform: uppercase; }
 
 .animation .hand {
   background: url("../Images/hand-2.png");
@@ -1209,7 +1263,8 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
   bottom: -29px;
   right: -550px;
   width: 503px;
-  height: 341px; }
+  height: 341px;
+  z-index: 6; }
 
 .animation .hand1 {
   background: url("../Images/hand-3.png");
@@ -1218,18 +1273,26 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
   bottom: 0;
   width: 215px;
   height: 374px;
-  z-index: 2; }
+  z-index: 7; }
 
 .animation .ipad {
-  background: url("../Images/ipad.jpg");
+  background: url(../Images/ipad.png);
   position: absolute;
   bottom: 0;
   right: 0;
   width: 765px;
   height: 555px;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 8; }
 
-.animation .ipad:after {
+.animation .sketch-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url(../Images/sketch-bg.jpg) 0 0 no-repeat;
+  background-size: cover; }
+
+/*.animation .ipad:after {
   content: "";
   width: 50px;
   height: 380px;
@@ -1237,7 +1300,8 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
   top: 48px;
   right: 0px;
   background: url("../Images/ipad.jpg") no-repeat -715px -47px;
-  z-index: 5; }
+  z-index: 5;
+}
 
 .animation .ipad:before {
   content: "";
@@ -1247,8 +1311,8 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
   left: 0;
   top: 0;
   background: url("../Images/ipad.jpg") no-repeat 0px 0px;
-  z-index: 5; }
-
+  z-index: 5;
+}*/
 .animation .ipad-image {
   position: absolute;
   left: 205px;
@@ -1957,6 +2021,13 @@ html {
   .column_accordion .open1st .answer:first-of-type {
     display: block; }
 
+.clients-listing {
+  position: relative;
+  z-index: 8; }
+
+@media only screen and (max-width: 1400px) {
+  .home video.topVideo {
+    top: -175px; } }
 @media only screen and (max-width: 1170px) {
   footer {
     height: auto; }
@@ -2041,7 +2112,7 @@ html {
       content: "view details";
       font-size: 10px; }
 
-  section.home {
+  .no-bg .home {
     background-size: auto; }
 
   header {

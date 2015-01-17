@@ -20,8 +20,9 @@ var animation = {
         animation.scene.attr("data-0", "position:relative;top:0px;");
         animation.scene.attr("data-top", "position:fixed;top:" + top + "px;");
         animation.scene.attr("data--" + (animation.animationEndKeyFrame ) + "-top", "position:fixed;top:" + top + "px;");
-        // animation.scene.attr("data--" + (animation.animationEndKeyFrame + 600 ) + "-top", "position:fixed;top:-" + (height + 1) + "px;");
+       // animation.scene.attr("data--" + (animation.animationEndKeyFrame + 600 ) + "-top", "position:fixed;top:-" + (height + 1) + "px;");
         animation.scene.attr("data-top-bottom", "position:fixed;top:-" + (height + 1) + "px;");
+
 
 
         console.log(animation.animationEndKeyFrame - 600);
@@ -33,7 +34,7 @@ var animation = {
 
     setAttrOfIpadImage: function () {
         var increment = 100,
-            startingKeyFrame = 3100,
+            startingKeyFrame = 4600,
             ipadImg = $(".ipad-image"),
             delay = 0.1;
         for (var i = 0; i < 13; i++) {
@@ -113,6 +114,7 @@ var animation = {
         //animation.debug();
     }
 };
+
 
 
 
