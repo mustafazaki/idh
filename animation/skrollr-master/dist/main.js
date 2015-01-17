@@ -89,8 +89,10 @@ var animation = {
     init: function () {
         animation.setAttrOfIpadImage();
         animation.setAttrOfAnimateAndScene();
-        animation.initNiceScroll();
+//        animation.initNiceScroll();
         animation.initSkrollr();
+
+
         //     animation.addEventListner();
     }
 };

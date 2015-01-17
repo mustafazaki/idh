@@ -1,4 +1,6 @@
-$proxima_nova_rgregular :"proxima_nova_rgregular";
+$avalon: "AvalonPlain";
+
+//Raleway
 
 ////////////mixins////////////////
 @mixin overlay($z-index) {
@@ -90,17 +92,12 @@ $proxima_nova_rgregular :"proxima_nova_rgregular";
   }
 }
 
-@mixin opacity($val){
-opacity: $val;
+@mixin opacity($val) {
+  opacity: $val;
   -ms-filter: alpha(opacity=#{$val*100});
   filter: alpha(opacity=#{$val*100});
 
-
-
-
 }
-
-
 
 //$percentage: (0, 20, 40, 60, 80, 100);
 //@each $value in $percentage {

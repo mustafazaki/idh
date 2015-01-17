@@ -8,14 +8,25 @@ var animation = {
 
 
     setAttrOfAnimateAndScene: function () {
-        animation.animate.css("height", (animation.animationEndKeyFrame+600) + "px");
+        console.log(animation.animationEndKeyFrame)
+
+        animation.animate.css("height", (animation.animationEndKeyFrame + 600) + "px");
         var height = animation.scene.height(),
-            top = (animation.windowHeight - height + $("#home nav").height()) ;
+
+            top = (animation.windowHeight - height + $("#home nav").height());
+
+
         console.log(top)
         animation.scene.attr("data-0", "position:relative;top:0px;");
         animation.scene.attr("data-top", "position:fixed;top:" + top + "px;");
-        animation.scene.attr("data--" + (animation.animationEndKeyFrame - height +top ) + "-top", "position:fixed;top:" + top + "px;");
-        animation.scene.attr("data--" + (animation.animationEndKeyFrame+top )+ "-top", "position:fixed;top:-" + (height + 1) + "px;");
+        animation.scene.attr("data--" + (animation.animationEndKeyFrame ) + "-top", "position:fixed;top:" + top + "px;");
+        // animation.scene.attr("data--" + (animation.animationEndKeyFrame + 600 ) + "-top", "position:fixed;top:-" + (height + 1) + "px;");
+        animation.scene.attr("data-top-bottom", "position:fixed;top:-" + (height + 1) + "px;");
+
+
+        console.log(animation.animationEndKeyFrame - 600);
+
+        //  console.log(animation.animationEndKeyFrame + top)
 
     },
 
@@ -33,6 +44,7 @@ var animation = {
             }
             startingKeyFrame = startingKeyFrame + increment;
         }
+        //   console.log(startingKeyFrame)
         animation.animationEndKeyFrame = startingKeyFrame;
     },
 
@@ -101,7 +113,6 @@ var animation = {
         //animation.debug();
     }
 };
-
 
 
 
