@@ -329,19 +329,19 @@ header nav ul ul li a {
 }
 
 header nav ul ul li:nth-child(1) a:hover {
-  background-color: #009fb5;
-}
-
-header nav ul ul li:nth-child(2) a:hover {
-  background-color: #ef4f4e;
-}
-
-header nav ul ul li:nth-child(3) a:hover {
   background-color: #a14176;
 }
 
+header nav ul ul li:nth-child(2) a:hover {
+  background-color: #f15d5e;
+}
+
+header nav ul ul li:nth-child(3) a:hover {
+  background-color: #00b6ad;
+}
+
 header nav ul ul li:nth-child(4) a:hover {
-  background-color: #7373a9;
+  background-color: #8c63ab;
 }
 
 .logged-in header {
@@ -373,16 +373,32 @@ header nav ul ul li:nth-child(4) a:hover {
   padding: 70px 0 0;
 }
 
-.about p {
+.about p, .about .readmore {
   position: relative;
   z-index: 5;
   display: block;
-  font: normal 30px $avalon;
+  font: normal 17px $avalon;
   color: #222222;
   text-align: center;
   width: 80%;
   padding: 0;
-  margin: 50px auto 0;
+  margin: 30px auto 0;
+
+}
+
+.about .hidden{
+
+
+  display: none;
+}
+
+
+
+
+.about .readmore{
+  color:#00b6ad;
+  cursor: pointer;
+
 
 }
 
@@ -492,6 +508,7 @@ header nav ul ul li:nth-child(4) a:hover {
 .about .services ul li:hover span {
   margin-top: -15px;
   margin-bottom: 15px;
+
 
 }
 
@@ -1343,6 +1360,8 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
   overflow: hidden;
   width: 100%;
   height: 600px;
+
+
 }
 
 .animation div {
@@ -1352,12 +1371,14 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
 .animation h1.process {
   font: bold 100% $avalon;
   color: #cbcbcb;
+
   width: 315px;
   height: 80px;
   position: absolute;
   left: 50%;
-  top: 50%;
-  margin: -40px 0 0 -157.5px;
+  top:20px;
+  margin: 0 0 0 -157.5px;
+  z-index: 10;
 }
 
 .animation .sketch, .animation .design {
@@ -1394,8 +1415,9 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url(../Images/mac-bg.jpg);
+    background: url(../Images/mac-bg.png);
     background-size: 100% 100%;
+
     opacity: 0;
   }
 
@@ -3178,6 +3200,9 @@ html {
     margin: 0 auto;
 
   }
+
+
+
   .services-intro {
     background-size: auto;
     background-position: center bottom;

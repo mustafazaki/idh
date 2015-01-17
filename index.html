@@ -75,9 +75,26 @@
     <!-- Text -->
     <h2>About Us</h2>
 
-    <p>Inspired Design House (IDH) is a company based in Dubai
-        that specializes in Exhibition stand design, conference,
+    <p>Inspired Design House (IDH) is a company based in Dubai that specializes in Exhibition stand design, conference
+    signage design, corporate branding and more.</p>
+
+     <p>We offer a turnkey solution due to a highly experienced team dedicated to graphic design, 3D renderings,
+    fabrication, installation and printing.</p>
+
+     <p>Our team can deliver innovative concepts that convert your given brief into designs that communicate your brand
+    strategies and messages to your target audience in a diverse and an active manner.</p>
+
+
+    <p class="hidden">Inspired Design House (IDH) is a company based in Dubai that specializes in Exhibition stand design, conference
         signage design, corporate branding and more.</p>
+
+    <p class="hidden">We offer a turnkey solution due to a highly experienced team dedicated to graphic design, 3D renderings,
+        fabrication, installation and printing.</p>
+
+    <p class="hidden">Our team can deliver innovative concepts that convert your given brief into designs that communicate your brand
+        strategies and messages to your target audience in a diverse and an active manner.</p>
+
+    <span onclick="$('#about .hidden').removeClass('hidden')" class="readmore">read more...</span>
     <!-- Services -->
     <div class="services">
         <ul>
@@ -123,9 +140,9 @@
     <div class="scene" id="scene" data-anchor-target="#animation">
 
         <h1 class="process" data-anchor-target="#scene"
-            data--100-bottom="transform:scale(0);opacity:1"
-            data--300-bottom="transform:scale(1);opacity:1"
-            data--400-bottom="transform:scale(10);opacity:0"
+            data--100-bottom="opacity:1"
+            data--300-bottom="opacity:1"
+            data--400-bottom="opacity:0"
                 >process</h1>
 
 
@@ -142,10 +159,12 @@
              data--2500-bottom="opacity:0;"
                 ></div>
 
+
+        <!--data--2300-bottom="opacity:1;"-->
+        <!--data--2500-bottom="opacity:0;"-->
         <div class="sketch-bg" data-anchor-target="#scene" data--301-bottom="opacity:0"
              data--800-bottom="opacity:1;"
-             data--2300-bottom="opacity:1;"
-             data--2500-bottom="opacity:0;"
+
                 ></div>
 
         <div class="sketch" data-anchor-target="#scene" data--1000-bottom="opacity:0"

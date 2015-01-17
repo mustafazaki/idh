@@ -274,16 +274,16 @@ header nav ul ul li a {
   transition: all .2s ease-in-out; }
 
 header nav ul ul li:nth-child(1) a:hover {
-  background-color: #009fb5; }
-
-header nav ul ul li:nth-child(2) a:hover {
-  background-color: #ef4f4e; }
-
-header nav ul ul li:nth-child(3) a:hover {
   background-color: #a14176; }
 
+header nav ul ul li:nth-child(2) a:hover {
+  background-color: #f15d5e; }
+
+header nav ul ul li:nth-child(3) a:hover {
+  background-color: #00b6ad; }
+
 header nav ul ul li:nth-child(4) a:hover {
-  background-color: #7373a9; }
+  background-color: #8c63ab; }
 
 .logged-in header {
   top: 32px; }
@@ -309,16 +309,23 @@ header nav ul ul li:nth-child(4) a:hover {
   z-index: 5;
   padding: 70px 0 0; }
 
-.about p {
+.about p, .about .readmore {
   position: relative;
   z-index: 5;
   display: block;
-  font: normal 30px "AvalonPlain";
+  font: normal 17px "AvalonPlain";
   color: #222222;
   text-align: center;
   width: 80%;
   padding: 0;
-  margin: 50px auto 0; }
+  margin: 30px auto 0; }
+
+.about .hidden {
+  display: none; }
+
+.about .readmore {
+  color: #00b6ad;
+  cursor: pointer; }
 
 .about nav {
   display: block;
@@ -1171,8 +1178,9 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
   height: 80px;
   position: absolute;
   left: 50%;
-  top: 50%;
-  margin: -40px 0 0 -157.5px; }
+  top: 20px;
+  margin: 0 0 0 -157.5px;
+  z-index: 10; }
 
 .animation .sketch, .animation .design {
   opacity: 0;
@@ -1203,7 +1211,7 @@ footer .fb:hover, footer .twitter:hover, footer .pint:hover, footer .google:hove
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(../Images/mac-bg.jpg);
+  background: url(../Images/mac-bg.png);
   background-size: 100% 100%;
   opacity: 0; }
 .animation .mac {
